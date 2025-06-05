@@ -8,8 +8,8 @@ echo "# Merged Markdown Files" > "$OUTPUT_FILE"
 echo "Generated on $(date)" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-# Find all markdown files except README.md
-for file in $(find . -name "*.md" ! -name "README.md" -type f | sort)
+# Find all markdown files except README.md and the output file
+for file in $(find . -name "*.md" ! -name "README.md" ! -name "$OUTPUT_FILE" -type f | sort)
 do
     # Get just the filename from the path
     filename=$(basename "$file")
