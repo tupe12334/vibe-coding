@@ -26,7 +26,6 @@ do
     
     # Add a separator
     echo "" >> "$OUTPUT_FILE"
-    echo "---" >> "$OUTPUT_FILE"
 done
 
 echo "Merged all markdown files into $OUTPUT_FILE"
