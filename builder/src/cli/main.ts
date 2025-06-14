@@ -2,7 +2,9 @@
  * Checkbox list examples
  */
 
+import { builder } from "../builder";
 import { getLanguage } from "./getLanguage";
+import { outputPath } from "./outputPath";
 
 // export async function projectType() {
 //   return inquirer.prompt([
@@ -25,9 +27,11 @@ import { getLanguage } from "./getLanguage";
 
 export const main = async () => {
   const language = await getLanguage();
-  // const type = await projectType();
-  // console.log(`Project type: ${type}`);
-  return language;
+  const mdFile = await builder({ language });
+  const path = await outputPath();
+;
+
+  return mdFile;
 };
 
 (async () => {
