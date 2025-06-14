@@ -1,0 +1,7 @@
+{
+  "name": "@vibe-code/builder",
+  "dependencies": {
+    "@types/prompts": "^2.4.9",
+    "prompts": "^2.4.2"
+  }
+}
