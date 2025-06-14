@@ -1,11 +1,13 @@
 {
   "name": "@vibe-code/builder",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "build:w": "tsc --watch",
+    "start": "node dist/main.js"
   },
   "dependencies": {
     "inquirer": "^12.6.3"
-  },
+  }, 
   "devDependencies": {
     "@types/node": "^24.0.1"
   }
