@@ -10,10 +10,12 @@
   },
   "devDependencies": {
     "@inquirer/testing": "^2.1.47",
+    "@types/mdast": "^4.0.4",
     "@types/node": "^24.0.1",
     "vitest": "^3.2.3"
   },
   "dependencies": {
-    "@inquirer/prompts": "^7.5.3"
+    "@inquirer/prompts": "^7.5.3",
+    "mdast-util-to-markdown": "^2.1.2"
   }
 }

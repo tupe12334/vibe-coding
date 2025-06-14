@@ -1,0 +1,3 @@
+{
+  "do": ["Use Interfaces over Types unless needed."]
+}

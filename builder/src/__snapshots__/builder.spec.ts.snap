@@ -1,10 +1,14 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`builder > working with language only 1`] = `
-"# TypeScript instructions for coding agents
+"# AI agent instructions
 
-## Do
+## Programming language (typescript)
 
-- Use Interfaces over Types unless needed.
+### Do
+
+* Use Interfaces over Types unless needed.
+
+### Don't
 "
 `;
