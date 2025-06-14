@@ -7,8 +7,9 @@
   },
   "dependencies": {
     "inquirer": "^12.6.3"
-  }, 
+  },
   "devDependencies": {
-    "@types/node": "^24.0.1"
+    "@types/node": "^24.0.1",
+    "vitest": "^3.2.3"
   }
 }
