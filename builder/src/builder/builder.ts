@@ -2,6 +2,7 @@ import { Root } from "mdast";
 import { toMarkdown } from "mdast-util-to-markdown";
 import { join } from "path";
 import { languageSegment } from "./language/languageSegment";
+import { generalSegment } from "./general/generalSegment";
 
 export interface BuilderOptions {
   language: string;
@@ -18,6 +19,8 @@ export async function builder(options: BuilderOptions) {
     ],
   };
   const templatesPath = join(__dirname, "../../templates");
+
+  tree.children = tree.children.concat(await generalSegment(templatesPath));
 
   tree.children = tree.children.concat(
     await languageSegment(templatesPath, options.language)
