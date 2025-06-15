@@ -1,11 +1,14 @@
+type BuilderOptionsWithLanguage = {
+  language: string;
+  projectType?: string;
+  packageManager?: string;
+};
+type BuilderOptionsWithoutLanguage = {
+  language?: never;
+  projectType?: string;
+  packageManager?: never;
+};
+
 export type BuilderOptions =
-  | {
-      language: string;
-      projectType?: string;
-      packageManager?: string;
-    }
-  | {
-      language?: never;
-      projectType?: string;
-      packageManager?: never;
-    };
+  | BuilderOptionsWithLanguage
+  | BuilderOptionsWithoutLanguage;
