@@ -10,9 +10,6 @@ export interface BuilderOptions {
   projectType?: string;
 }
 export async function builder(options: BuilderOptions = {}) {
-  console.info(
-    `Building AI agent instructions with options: ${JSON.stringify(options)}`
-  );
   const tree: Root = {
     type: "root",
     children: [
