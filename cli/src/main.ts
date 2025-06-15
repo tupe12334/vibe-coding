@@ -1,5 +1,5 @@
 import { writeFile } from "fs/promises";
-import { builder, BuilderOptions } from "../../builder/src/builder";
+import { builder, BuilderOptions } from "@vibe-builder/builder";
 import { getLanguage } from "./getLanguage";
 import { getProjectType } from "./getProjectType";
 import { getFramework } from "./getFramework";
