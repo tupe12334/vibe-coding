@@ -2,6 +2,7 @@
   "name": "@vibe-code/builder",
   "scripts": {
     "build": "tsc",
+    "prebuild": "rimraf dist",
     "build:w": "tsc --watch",
     "start:cli": "node dist/cli/main.js",
     "test": "vitest run",
@@ -15,6 +16,7 @@
     "@types/mdast": "^4.0.4",
     "@types/node": "^24.0.1",
     "@vitest/ui": "3.2.3",
+    "rimraf": "^6.0.1",
     "vitest": "^3.2.3"
   },
   "dependencies": {
