@@ -6,6 +6,7 @@ import { writeFile } from "fs/promises";
 import { builder } from "../builder";
 import { getLanguage } from "./getLanguage";
 import { outputPath } from "./outputPath";
+import { FINISH, SKIP } from "./constants";
 
 // export async function projectType() {
 //   return inquirer.prompt([
@@ -26,11 +27,31 @@ import { outputPath } from "./outputPath";
 //   ]);
 // }
 
+const generateFile = async (options: Record<string, unknown>, path?: string) => {
+  const mdFile = await builder(options);
+  const output = path ?? process.cwd();
+  await writeFile(`${output}/Agents.md`, mdFile, "utf-8");
+};
+
 export const main = async () => {
+  const options: Record<string, unknown> = {};
+
   const language = await getLanguage();
-  const mdFile = await builder({ language });
-  const path = await outputPath();
-  await writeFile(`${path}/Agents.md`, mdFile, "utf-8");
+  if (language === FINISH) {
+    await generateFile(options);
+    return;
+  }
+  if (language !== SKIP) {
+    options.language = language;
+  }
+
+  const pathAnswer = await outputPath();
+  if (pathAnswer === FINISH) {
+    await generateFile(options);
+    return;
+  }
+  const path = pathAnswer === SKIP ? undefined : pathAnswer;
+  await generateFile(options, path);
 };
 
 (async () => {
