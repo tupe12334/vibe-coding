@@ -3,9 +3,11 @@ import { toMarkdown } from "mdast-util-to-markdown";
 import { join } from "path";
 import { languageSegment } from "./language/languageSegment";
 import { generalSegment } from "./general/generalSegment";
+import { projectSegment } from "./project/projectSegment";
 
 export interface BuilderOptions {
   language?: string;
+  projectType?: string;
 }
 export async function builder(options: BuilderOptions = {}) {
   const tree: Root = {
@@ -21,6 +23,12 @@ export async function builder(options: BuilderOptions = {}) {
   const templatesPath = join(__dirname, "../../templates");
 
   tree.children = tree.children.concat(await generalSegment(templatesPath));
+
+  if (options.projectType) {
+    tree.children = tree.children.concat(
+      await projectSegment(templatesPath, options.projectType)
+    );
+  }
 
   if (options.language) {
     tree.children = tree.children.concat(
