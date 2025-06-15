@@ -1,11 +1,12 @@
 import { readFile } from "fs/promises";
 import { join } from "path";
 import { Languages } from "./options";
+import { RootContent } from "mdast";
 
 export const languageSegment = async (
   templatesPath: string,
   language: string
-) => {
+): Promise<RootContent[]> => {
   const languageJsonFile = (
     await readFile(join(templatesPath, "language", `${language}.json`), {
       encoding: "utf-8",
@@ -42,7 +43,7 @@ export const languageSegment = async (
     }
   }
 
-  const languageSegment = [
+  const languageSegment: RootContent[] = [
     {
       type: "heading",
       depth: 2,

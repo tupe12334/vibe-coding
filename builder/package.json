@@ -1,5 +1,20 @@
 {
   "name": "@vibe-code/builder",
+  "version": "0.1.0",
+  "description": "Generate Vibe coding agent instructions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "vibe-builder": "dist/cli/main.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vibe-code/vibe-coding.git"
+  },
   "scripts": {
     "build": "tsc",
     "prebuild": "rimraf dist",

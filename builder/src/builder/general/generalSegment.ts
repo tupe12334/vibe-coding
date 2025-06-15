@@ -1,7 +1,11 @@
 import { readFile } from "fs/promises";
 import { join } from "path";
 
-export const generalSegment = async (templatesPath: string) => {
+import { RootContent } from "mdast";
+
+export const generalSegment = async (
+  templatesPath: string
+): Promise<RootContent[]> => {
   const generalJsonFile = (
     await readFile(join(templatesPath, "general.json"), {
       encoding: "utf-8",
@@ -9,7 +13,7 @@ export const generalSegment = async (templatesPath: string) => {
   ).toString();
   const generalItems = JSON.parse(generalJsonFile);
 
-  const generalSegment = [
+  const generalSegment: RootContent[] = [
     {
       type: "heading",
       depth: 2,
