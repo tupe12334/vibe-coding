@@ -5,8 +5,6 @@ exports[`builder > working with language and package manager 1`] = `
 
 ## General Guidelines
 
-### Do
-
 * Don't work on any of the tasks in the TODO.md file unless you are asked to.
 
 * Always try to early return from functions.
@@ -20,8 +18,6 @@ exports[`builder > working with language and package manager 1`] = `
 Package Manager: npm
 
 ## Programming language (typescript)
-
-### Do
 
 * Use Interfaces over Types unless needed.
 
@@ -40,8 +36,6 @@ exports[`builder > working with language only 1`] = `
 
 ## General Guidelines
 
-### Do
-
 * Don't work on any of the tasks in the TODO.md file unless you are asked to.
 
 * Always try to early return from functions.
@@ -53,8 +47,6 @@ exports[`builder > working with language only 1`] = `
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
 ## Programming language (javascript)
-
-### Do
 
 * Use \`const\` over \`let\` unless reassignment is needed.
 
@@ -71,8 +63,6 @@ exports[`builder > working with language only with a language that is superset 1
 
 ## General Guidelines
 
-### Do
-
 * Don't work on any of the tasks in the TODO.md file unless you are asked to.
 
 * Always try to early return from functions.
@@ -84,8 +74,6 @@ exports[`builder > working with language only with a language that is superset 1
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
 ## Programming language (typescript)
-
-### Do
 
 * Use Interfaces over Types unless needed.
 
@@ -104,8 +92,6 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 
 ## General Guidelines
 
-### Do
-
 * Don't work on any of the tasks in the TODO.md file unless you are asked to.
 
 * Always try to early return from functions.
@@ -123,8 +109,6 @@ exports[`builder > working with project type only 1`] = `
 
 ## General Guidelines
 
-### Do
-
 * Don't work on any of the tasks in the TODO.md file unless you are asked to.
 
 * Always try to early return from functions.
@@ -136,8 +120,6 @@ exports[`builder > working with project type only 1`] = `
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
 ## Project type (frontend)
-
-### Do
 
 * Prefer working with flex layouts for responsive design.
 

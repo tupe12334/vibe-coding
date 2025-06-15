@@ -7,7 +7,7 @@ export const generalSegment = async (templatesPath: string) => {
       encoding: "utf-8",
     })
   ).toString();
-  const generalObject = JSON.parse(generalJsonFile);
+  const generalItems = JSON.parse(generalJsonFile);
 
   const generalSegment = [
     {
@@ -15,8 +15,7 @@ export const generalSegment = async (templatesPath: string) => {
       depth: 2,
       children: [{ type: "text", value: "General Guidelines" }],
     },
-    { type: "heading", depth: 3, children: [{ type: "text", value: "Do" }] },
-    ...generalObject.do.map((item: string) => ({
+    ...generalItems.map((item: string) => ({
       type: "listItem",
       children: [{ type: "text", value: item }],
     })),

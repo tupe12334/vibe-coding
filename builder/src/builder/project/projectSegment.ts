@@ -10,7 +10,7 @@ export const projectSegment = async (
       encoding: "utf-8",
     })
   ).toString();
-  const projectObject = JSON.parse(projectJsonFile);
+  const projectItems = JSON.parse(projectJsonFile);
 
   const projectSegment = [
     {
@@ -21,23 +21,11 @@ export const projectSegment = async (
         { type: "text", value: ` (${projectType})` },
       ],
     },
-    { type: "heading", depth: 3, children: [{ type: "text", value: "Do" }] },
-    ...projectObject.do.map((item: string) => ({
+    ...projectItems.map((item: string) => ({
       type: "listItem",
       children: [{ type: "text", value: item }],
     })),
   ];
-
-  // Add "Don't" section if it exists
-  if (projectObject.dont && projectObject.dont.length > 0) {
-    projectSegment.push(
-      { type: "heading", depth: 3, children: [{ type: "text", value: "Don't" }] },
-      ...projectObject.dont.map((item: string) => ({
-        type: "listItem",
-        children: [{ type: "text", value: item }],
-      }))
-    );
-  }
 
   return projectSegment;
 };
