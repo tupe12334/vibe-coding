@@ -4,6 +4,7 @@ import { join } from "path";
 import { generalSegment } from "./general/generalSegment";
 import { languageSegment } from "./language/languageSegment";
 import { projectSegment } from "./project/projectSegment";
+import { frameworkSegment } from "./framework/frameworkSegment";
 import { BuilderOptions } from "./BuilderOptions";
 
 export async function builder(options?: BuilderOptions): Promise<string> {
@@ -23,7 +24,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
   if (options === undefined) {
     return toMarkdown(tree);
   }
-  const { language, packageManager, projectType } = options;
+  const { language, packageManager, projectType, framework } = options;
   if (packageManager) {
     tree.children.push({
       type: "paragraph",
@@ -45,6 +46,12 @@ export async function builder(options?: BuilderOptions): Promise<string> {
   if (projectType) {
     tree.children = tree.children.concat(
       await projectSegment(templatesPath, projectType)
+    );
+  }
+
+  if (framework) {
+    tree.children = tree.children.concat(
+      await frameworkSegment(templatesPath, framework)
     );
   }
 

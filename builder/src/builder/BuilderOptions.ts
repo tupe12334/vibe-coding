@@ -1,14 +1,15 @@
+type BaseBuilderOptions = {
+  projectType?: string;
+  framework?: string;
+};
 type BuilderOptionsWithLanguage = {
   language: string;
-  projectType?: string;
   packageManager?: string;
 };
 type BuilderOptionsWithoutLanguage = {
   language?: never;
-  projectType?: string;
   packageManager?: never;
 };
 
-export type BuilderOptions =
-  | BuilderOptionsWithLanguage
-  | BuilderOptionsWithoutLanguage;
+export type BuilderOptions = BaseBuilderOptions &
+  (BuilderOptionsWithLanguage | BuilderOptionsWithoutLanguage);

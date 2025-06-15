@@ -1,5 +1,90 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`builder > working with all options including framework 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+Package Manager: npm
+
+## Programming language (typescript)
+
+* Use Interfaces over Types unless needed.
+
+* Use \`const\` over \`let\` unless reassignment is needed.
+
+* Use \`===\` over \`==\` for strict equality checks.
+
+* Use arrow functions for anonymous functions.
+
+* Use template literals for string interpolation.
+
+## Project type (frontend)
+
+* Prefer working with flex layouts for responsive design.
+
+* Use rems for font sizes and spacing to ensure scalability.
+
+* When writing a component, try to enter logic or network into it.
+
+## Framework (react)
+
+* Use key in React lists to help React identify which items have changed, are added, or removed.
+"
+`;
+
+exports[`builder > working with framework only - nestjs 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+## Framework (nestjs)
+
+* Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities.
+"
+`;
+
+exports[`builder > working with framework only - react 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+## Framework (react)
+
+* Use key in React lists to help React identify which items have changed, are added, or removed.
+"
+`;
+
 exports[`builder > working with language and package manager 1`] = `
 "# AI agent instructions
 
@@ -87,6 +172,43 @@ exports[`builder > working with language only with a language that is superset 1
 "
 `;
 
+exports[`builder > working with language, project type and framework 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+## Programming language (typescript)
+
+* Use Interfaces over Types unless needed.
+
+* Use \`const\` over \`let\` unless reassignment is needed.
+
+* Use \`===\` over \`==\` for strict equality checks.
+
+* Use arrow functions for anonymous functions.
+
+* Use template literals for string interpolation.
+
+## Project type (backend)
+
+* Always validate endpoint request data.
+
+## Framework (nestjs)
+
+* Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities.
+"
+`;
+
 exports[`builder > working with no arguments returns general segment only 1`] = `
 "# AI agent instructions
 
@@ -101,6 +223,60 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
+"
+`;
+
+exports[`builder > working with project type and framework - backend with nestjs 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+## Project type (backend)
+
+* Always validate endpoint request data.
+
+## Framework (nestjs)
+
+* Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities.
+"
+`;
+
+exports[`builder > working with project type and framework - frontend with react 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+## Project type (frontend)
+
+* Prefer working with flex layouts for responsive design.
+
+* Use rems for font sizes and spacing to ensure scalability.
+
+* When writing a component, try to enter logic or network into it.
+
+## Framework (react)
+
+* Use key in React lists to help React identify which items have changed, are added, or removed.
 "
 `;
 

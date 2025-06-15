@@ -30,4 +30,55 @@ describe("builder", () => {
 
     expect(response).toMatchSnapshot();
   });
+
+  test("working with framework only - nestjs", async () => {
+    const response = await builder({ framework: "nestjs" });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with framework only - react", async () => {
+    const response = await builder({ framework: "react" });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with project type and framework - backend with nestjs", async () => {
+    const response = await builder({
+      projectType: "backend",
+      framework: "nestjs",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with project type and framework - frontend with react", async () => {
+    const response = await builder({
+      projectType: "frontend",
+      framework: "react",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with language, project type and framework", async () => {
+    const response = await builder({
+      language: "typescript",
+      projectType: "backend",
+      framework: "nestjs",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with all options including framework", async () => {
+    const response = await builder({
+      language: "typescript",
+      packageManager: "npm",
+      projectType: "frontend",
+      framework: "react",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
 });
