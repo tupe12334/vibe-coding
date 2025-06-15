@@ -14,7 +14,7 @@
 
 - Don't use `any` in TypeScript, use `unknown` instead.
 
-- Don't cast types to a general type like `any`.
+- Don't cast types without validation.
 
 Package Manager: pnpm
 
