@@ -1,7 +1,6 @@
-import { readFile } from "fs/promises";
-import { join } from "path";
 import { Root } from "mdast";
 import { toMarkdown } from "mdast-util-to-markdown";
+import { join } from "path";
 import { languageSegment } from "./language/languageSegment";
 
 export interface BuilderOptions {
@@ -19,10 +18,6 @@ export async function builder(options: BuilderOptions) {
     ],
   };
   const templatesPath = join(__dirname, "../../templates");
-
-  // const generalMdFile = (
-  //   await readFile(join(templatesPath, "general.md"))
-  // ).toString();
 
   tree.children = tree.children.concat(
     await languageSegment(templatesPath, options.language)

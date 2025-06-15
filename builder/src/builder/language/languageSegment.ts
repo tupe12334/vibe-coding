@@ -1,7 +1,5 @@
 import { readFile } from "fs/promises";
 import { join } from "path";
-import { Root } from "mdast";
-import { toMarkdown } from "mdast-util-to-markdown";
 
 export const languageSegment = async (
   templatesPath: string,
@@ -13,7 +11,6 @@ export const languageSegment = async (
     })
   ).toString();
   const languageObject = JSON.parse(languageJsonFile);
-  console.log({ languageObject });
 
   const languageSegment = [
     {
