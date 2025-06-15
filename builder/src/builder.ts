@@ -18,7 +18,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
       },
     ],
   };
-  const templatesPath = join(__dirname, "../../templates");
+  const templatesPath = join(__dirname, "../templates");
 
   tree.children = tree.children.concat(await generalSegment(templatesPath));
   if (options === undefined) {

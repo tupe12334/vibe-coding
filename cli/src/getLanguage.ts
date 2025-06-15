@@ -1,5 +1,5 @@
 import { select } from "@inquirer/prompts";
-import { Languages } from "../builder";
+import { Languages } from "@vibe-builder/builder";
 
 export const getLanguage = async () => {
   return select({

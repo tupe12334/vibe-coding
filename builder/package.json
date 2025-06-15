@@ -1,5 +1,5 @@
 {
-  "name": "@vibe-code/builder",
+  "name": "@vibe-builder/builder",
   "version": "0.1.0",
   "description": "Generate Vibe coding agent instructions",
   "main": "dist/index.js",
@@ -27,7 +27,6 @@
     "test:watch:update": "vitest watch -u"
   },
   "devDependencies": {
-    "@inquirer/testing": "^2.1.47",
     "@types/mdast": "^4.0.4",
     "@types/node": "^24.0.1",
     "@vitest/ui": "3.2.3",
@@ -35,7 +34,6 @@
     "vitest": "^3.2.3"
   },
   "dependencies": {
-    "@inquirer/prompts": "^7.5.3",
     "mdast-util-to-markdown": "^2.1.2"
   }
 }
