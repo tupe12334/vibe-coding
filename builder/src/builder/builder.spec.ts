@@ -31,6 +31,12 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with project type ui-lib", async () => {
+    const response = await builder({ projectType: "ui-lib" });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with framework only - nestjs", async () => {
     const response = await builder({ framework: "nestjs" });
 
