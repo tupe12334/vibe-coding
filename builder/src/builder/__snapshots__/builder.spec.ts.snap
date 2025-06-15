@@ -17,7 +17,7 @@ exports[`builder > working with all options including framework 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 Package Manager: npm
 
@@ -64,7 +64,7 @@ exports[`builder > working with framework only - nestjs 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Framework (nestjs)
 
@@ -89,7 +89,7 @@ exports[`builder > working with framework only - react 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Framework (react)
 
@@ -114,7 +114,7 @@ exports[`builder > working with language and package manager 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 Package Manager: npm
 
@@ -149,7 +149,7 @@ exports[`builder > working with language only 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Programming language (javascript)
 
@@ -180,7 +180,7 @@ exports[`builder > working with language only with a language that is superset 1
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Programming language (typescript)
 
@@ -213,7 +213,7 @@ exports[`builder > working with language, project type and framework 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Programming language (typescript)
 
@@ -254,7 +254,7 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 "
 `;
 
@@ -275,7 +275,7 @@ exports[`builder > working with project type and framework - backend with nestjs
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Project type (backend)
 
@@ -304,7 +304,7 @@ exports[`builder > working with project type and framework - frontend with react
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Project type (frontend)
 
@@ -337,7 +337,7 @@ exports[`builder > working with project type only 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Project type (frontend)
 
@@ -366,7 +366,7 @@ exports[`builder > working with project type ui-lib 1`] = `
 
 * Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
-* Don't cast types to a general type like \`any\`.
+* Don't cast types without validation.
 
 ## Project type (ui-lib)
 
