@@ -1,0 +1,3 @@
+[
+  "Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities."
+]
