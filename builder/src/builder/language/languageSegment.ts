@@ -14,25 +14,30 @@ export const languageSegment = async (
   const languageObject = JSON.parse(languageJsonFile);
 
   // Find the language configuration to check for subsets
-  const languageConfig = Languages.find(lang => lang.name === language);
-  
+  const languageConfig = Languages.find((lang) => lang.name === language);
+
   // Collect "do" items starting with current language
   let allDoItems = [...languageObject.do];
-  
+
   // If language has subsets, load and append their content
   if (languageConfig?.subset) {
     for (const subsetLanguage of languageConfig.subset) {
       try {
         const subsetJsonFile = (
-          await readFile(join(templatesPath, "language", `${subsetLanguage}.json`), {
-            encoding: "utf-8",
-          })
+          await readFile(
+            join(templatesPath, "language", `${subsetLanguage}.json`),
+            {
+              encoding: "utf-8",
+            }
+          )
         ).toString();
         const subsetObject = JSON.parse(subsetJsonFile);
         allDoItems = allDoItems.concat(subsetObject.do);
       } catch (error) {
         // If subset template doesn't exist, skip it
-        console.warn(`Warning: Could not load subset template for ${subsetLanguage}`);
+        console.warn(
+          `Warning: Could not load subset template for ${subsetLanguage}`
+        );
       }
     }
   }
