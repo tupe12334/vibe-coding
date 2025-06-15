@@ -1,0 +1,6 @@
+{
+  "do": [
+    "Prefer working with flex layouts for responsive design.",
+    "Use rems for font sizes and spacing to ensure scalability."
+  ]
+}
