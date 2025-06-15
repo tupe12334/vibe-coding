@@ -1,15 +1,15 @@
 import { Root } from "mdast";
 import { toMarkdown } from "mdast-util-to-markdown";
 import { join } from "path";
-import { languageSegment } from "./language/languageSegment";
 import { generalSegment } from "./general/generalSegment";
+import { languageSegment } from "./language/languageSegment";
 import { projectSegment } from "./project/projectSegment";
 
 export interface BuilderOptions {
   language?: string;
   projectType?: string;
 }
-export async function builder(options: BuilderOptions = {}) {
+export async function builder(options: BuilderOptions = {}): Promise<string> {
   const tree: Root = {
     type: "root",
     children: [
