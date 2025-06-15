@@ -4,11 +4,9 @@ import { join } from "path";
 import { generalSegment } from "./general/generalSegment";
 import { languageSegment } from "./language/languageSegment";
 import { projectSegment } from "./project/projectSegment";
+import { BuilderOptions } from "./BuilderOptions";
 
-export interface BuilderOptions {
-  language?: string;
-  projectType?: string;
-}
+
 export async function builder(
   options: BuilderOptions | undefined
 ): Promise<string> {
@@ -28,16 +26,29 @@ export async function builder(
   if (options === undefined) {
     return toMarkdown(tree);
   }
+  const { language, packageManager, projectType } = options;
 
-  if (options.projectType) {
+  if (language) {
     tree.children = tree.children.concat(
-      await projectSegment(templatesPath, options.projectType)
+      await languageSegment(templatesPath, language)
     );
   }
 
-  if (options.language) {
+  if (packageManager) {
+    tree.children.push({
+      type: "paragraph",
+      children: [
+        {
+          type: "text",
+          value: `Package Manager: ${packageManager}`,
+        },
+      ],
+    });
+  }
+
+  if (projectType) {
     tree.children = tree.children.concat(
-      await languageSegment(templatesPath, options.language)
+      await projectSegment(templatesPath, projectType)
     );
   }
 
