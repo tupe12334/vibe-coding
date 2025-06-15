@@ -1,5 +1,5 @@
 import { select } from "@inquirer/prompts";
-import { getAvailableFrameworks } from "../builder/framework";
+import { getAvailableFrameworks } from "../../builder/src/framework";
 
 export const getFramework = async (projectType: string) => {
   const availableFrameworks = getAvailableFrameworks(projectType);

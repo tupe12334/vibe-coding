@@ -1,5 +1,5 @@
 import { select } from "@inquirer/prompts";
-import { Languages } from "../builder";
+import { Languages } from "../../builder/src/builder";
 
 export const getLanguage = async () => {
   return select({
