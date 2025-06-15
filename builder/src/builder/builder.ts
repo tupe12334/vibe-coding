@@ -5,9 +5,9 @@ import { languageSegment } from "./language/languageSegment";
 import { generalSegment } from "./general/generalSegment";
 
 export interface BuilderOptions {
-  language: string;
+  language?: string;
 }
-export async function builder(options: BuilderOptions) {
+export async function builder(options: BuilderOptions = {}) {
   const tree: Root = {
     type: "root",
     children: [
@@ -22,9 +22,11 @@ export async function builder(options: BuilderOptions) {
 
   tree.children = tree.children.concat(await generalSegment(templatesPath));
 
-  tree.children = tree.children.concat(
-    await languageSegment(templatesPath, options.language)
-  );
+  if (options.language) {
+    tree.children = tree.children.concat(
+      await languageSegment(templatesPath, options.language)
+    );
+  }
 
   return toMarkdown(tree);
 }

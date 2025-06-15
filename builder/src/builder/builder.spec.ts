@@ -1,6 +1,12 @@
 import { describe, expect, test } from "vitest";
 import { builder } from "./builder";
 describe("builder", () => {
+  test("working with no arguments returns general segment only", async () => {
+    const response = await builder();
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with language only", async () => {
     const response = await builder({ language: "typescript" });
 
