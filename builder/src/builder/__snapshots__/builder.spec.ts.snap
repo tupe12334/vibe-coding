@@ -22,10 +22,47 @@ Package Manager: npm
 ### Do
 
 * Use Interfaces over Types unless needed.
+
+* Use \`const\` over \`let\` unless reassignment is needed.
+
+* Use \`===\` over \`==\` for strict equality checks.
+
+* Use arrow functions for anonymous functions.
+
+* Use template literals for string interpolation.
 "
 `;
 
 exports[`builder > working with language only 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+### Do
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+## Programming language (javascript)
+
+### Do
+
+* Use \`const\` over \`let\` unless reassignment is needed.
+
+* Use \`===\` over \`==\` for strict equality checks.
+
+* Use arrow functions for anonymous functions.
+
+* Use template literals for string interpolation.
+"
+`;
+
+exports[`builder > working with language only with a language that is superset 1`] = `
 "# AI agent instructions
 
 ## General Guidelines
@@ -45,6 +82,14 @@ exports[`builder > working with language only 1`] = `
 ### Do
 
 * Use Interfaces over Types unless needed.
+
+* Use \`const\` over \`let\` unless reassignment is needed.
+
+* Use \`===\` over \`==\` for strict equality checks.
+
+* Use arrow functions for anonymous functions.
+
+* Use template literals for string interpolation.
 "
 `;
 

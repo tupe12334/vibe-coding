@@ -7,8 +7,13 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
-  test("working with language only", async () => {
+  test("working with language only with a language that is superset", async () => {
     const response = await builder({ language: "typescript" });
+
+    expect(response).toMatchSnapshot();
+  });
+  test("working with language only", async () => {
+    const response = await builder({ language: "javascript" });
 
     expect(response).toMatchSnapshot();
   });
