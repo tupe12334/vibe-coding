@@ -9,7 +9,9 @@ export interface BuilderOptions {
   language?: string;
   projectType?: string;
 }
-export async function builder(options: BuilderOptions = {}): Promise<string> {
+export async function builder(
+  options: BuilderOptions | undefined
+): Promise<string> {
   const tree: Root = {
     type: "root",
     children: [
@@ -23,6 +25,9 @@ export async function builder(options: BuilderOptions = {}): Promise<string> {
   const templatesPath = join(__dirname, "../../templates");
 
   tree.children = tree.children.concat(await generalSegment(templatesPath));
+  if (options === undefined) {
+    return toMarkdown(tree);
+  }
 
   if (options.projectType) {
     tree.children = tree.children.concat(
