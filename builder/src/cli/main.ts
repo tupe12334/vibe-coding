@@ -6,12 +6,14 @@ import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
 
 export const main = async () => {
-  const builderOptions: BuilderOptions = {};
-  builderOptions.language = await getLanguage();
-  if (builderOptions.language) {
-    builderOptions.packageManager = await getPackageManager(
-      builderOptions.language
-    );
+  let builderOptions: BuilderOptions = {};
+  const language = await getLanguage();
+  if (language) {
+    builderOptions = {
+      ...builderOptions,
+      language,
+      packageManager: await getPackageManager(language),
+    };
   }
   builderOptions.projectType = await getProjectType();
 
