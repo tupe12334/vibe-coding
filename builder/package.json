@@ -24,16 +24,29 @@
     "test:watch": "vitest watch",
     "test:ui": "vitest --ui",
     "test:update": "vitest -u",
-    "test:watch:update": "vitest watch -u"
+    "test:watch:update": "vitest watch -u",
+    "release": "release-it"
   },
   "devDependencies": {
     "@types/mdast": "^4.0.4",
     "@types/node": "^24.0.1",
     "@vitest/ui": "3.2.3",
+    "release-it": "^19.0.3",
+    "typescript": "~5.1.6",
     "rimraf": "^6.0.1",
     "vitest": "^3.2.3"
   },
   "dependencies": {
     "mdast-util-to-markdown": "^2.1.2"
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}",
+      "commitMessage": "chore: release v${version}"
+    },
+    "npm": {
+      "publish": true,
+      "access": "public"
+    }
   }
 }

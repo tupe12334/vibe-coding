@@ -1,7 +1,7 @@
 import { readFile } from "fs/promises";
 import { join } from "path";
 import { Languages } from "./options";
-import { RootContent } from "mdast";
+import { RootContent, ListItem } from "mdast";
 
 export const languageSegment = async (
   templatesPath: string,
@@ -52,10 +52,18 @@ export const languageSegment = async (
         { type: "text", value: ` (${language})` },
       ],
     },
-    ...allItems.map((item: string) => ({
-      type: "listItem",
-      children: [{ type: "text", value: item }],
-    })),
+    {
+      type: "list",
+      ordered: false,
+      children: allItems.map(
+        (item: string): ListItem => ({
+          type: "listItem",
+          children: [
+            { type: "paragraph", children: [{ type: "text", value: item }] },
+          ],
+        })
+      ),
+    },
   ];
   return languageSegment;
 };
