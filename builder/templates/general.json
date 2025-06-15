@@ -3,6 +3,7 @@
     "Don't work on any of the tasks in the TODO.md file unless you are asked to.",
     "Always try to early return from functions.",
     "Use `const` for variables that are not reassigned.",
-    "Make sure to focus on why and not how in documentation."
+    "Make sure to focus on why and not how in documentation.",
+    "Write predictable functions and make a spec file for them according to the testing library in use."
   ]
 }

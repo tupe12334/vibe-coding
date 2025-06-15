@@ -15,6 +15,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 * Make sure to focus on why and not how in documentation.
 
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -48,6 +50,8 @@ exports[`builder > working with language only 1`] = `
 
 * Make sure to focus on why and not how in documentation.
 
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
 ## Programming language (javascript)
 
 ### Do
@@ -76,6 +80,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Use \`const\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
 
 ## Programming language (typescript)
 
@@ -107,6 +113,8 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Use \`const\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
 "
 `;
 
@@ -124,6 +132,8 @@ exports[`builder > working with project type only 1`] = `
 * Use \`const\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
 
 ## Project type (frontend)
 
