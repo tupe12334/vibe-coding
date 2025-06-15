@@ -12,6 +12,14 @@ describe("builder", () => {
 
     expect(response).toMatchSnapshot();
   });
+  test("working with language and package manager", async () => {
+    const response = await builder({
+      language: "typescript",
+      packageManager: "npm",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
   test("working with project type only", async () => {
     const response = await builder({ projectType: "frontend" });
 

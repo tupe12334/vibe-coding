@@ -1,5 +1,30 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`builder > working with language and package manager 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+### Do
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+## Programming language (typescript)
+
+### Do
+
+* Use Interfaces over Types unless needed.
+
+### Don't
+
+Package Manager: npm
+"
+`;
+
 exports[`builder > working with language only 1`] = `
 "# AI agent instructions
 
