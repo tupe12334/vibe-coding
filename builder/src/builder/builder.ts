@@ -24,13 +24,6 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     return toMarkdown(tree);
   }
   const { language, packageManager, projectType } = options;
-
-  if (language) {
-    tree.children = tree.children.concat(
-      await languageSegment(templatesPath, language)
-    );
-  }
-
   if (packageManager) {
     tree.children.push({
       type: "paragraph",
@@ -41,6 +34,12 @@ export async function builder(options?: BuilderOptions): Promise<string> {
         },
       ],
     });
+  }
+
+  if (language) {
+    tree.children = tree.children.concat(
+      await languageSegment(templatesPath, language)
+    );
   }
 
   if (projectType) {

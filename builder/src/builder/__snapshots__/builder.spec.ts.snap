@@ -13,6 +13,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 * Make sure to focus on why and not how in documentation.
 
+Package Manager: npm
+
 ## Programming language (typescript)
 
 ### Do
@@ -20,8 +22,6 @@ exports[`builder > working with language and package manager 1`] = `
 * Use Interfaces over Types unless needed.
 
 ### Don't
-
-Package Manager: npm
 "
 `;
 
