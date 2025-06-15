@@ -6,10 +6,7 @@ import { languageSegment } from "./language/languageSegment";
 import { projectSegment } from "./project/projectSegment";
 import { BuilderOptions } from "./BuilderOptions";
 
-
-export async function builder(
-  options: BuilderOptions | undefined
-): Promise<string> {
+export async function builder(options?: BuilderOptions): Promise<string> {
   const tree: Root = {
     type: "root",
     children: [
