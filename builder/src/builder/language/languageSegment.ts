@@ -26,7 +26,6 @@ export const languageSegment = async (
       type: "listItem",
       children: [{ type: "text", value: item }],
     })),
-    { type: "heading", depth: 3, children: [{ type: "text", value: "Don't" }] },
   ];
   return languageSegment;
 };

@@ -22,8 +22,6 @@ Package Manager: npm
 ### Do
 
 * Use Interfaces over Types unless needed.
-
-### Don't
 "
 `;
 
@@ -47,8 +45,6 @@ exports[`builder > working with language only 1`] = `
 ### Do
 
 * Use Interfaces over Types unless needed.
-
-### Don't
 "
 `;
 
