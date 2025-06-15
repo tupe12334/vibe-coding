@@ -37,6 +37,21 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with project type lib", async () => {
+    const response = await builder({ projectType: "lib" });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with project type lib and language typescript", async () => {
+    const response = await builder({
+      projectType: "lib",
+      language: "typescript",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with framework only - nestjs", async () => {
     const response = await builder({ framework: "nestjs" });
 
