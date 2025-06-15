@@ -1,1 +1,4 @@
-export const Languages = ["javascript", "typescript"];
+export const Languages = [
+  { name: "javascript" },
+  { name: "typescript", subset: ["javascript"] },
+];
