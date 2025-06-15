@@ -37,3 +37,26 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Make sure to focus on why and not how in documentation.
 "
 `;
+
+exports[`builder > working with project type only 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+### Do
+
+* Always try to early return from functions.
+
+* Use \`const\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+## Project type (frontend)
+
+### Do
+
+* Prefer working with flex layouts for responsive design.
+
+* Use rems for font sizes and spacing to ensure scalability.
+"
+`;

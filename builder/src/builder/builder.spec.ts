@@ -12,4 +12,9 @@ describe("builder", () => {
 
     expect(response).toMatchSnapshot();
   });
+  test("working with project type only", async () => {
+    const response = await builder({ projectType: "frontend" });
+
+    expect(response).toMatchSnapshot();
+  });
 });
