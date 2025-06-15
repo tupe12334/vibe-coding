@@ -7,6 +7,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 ### Do
 
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
 * Always try to early return from functions.
 
 * Use \`const\` for variables that are not reassigned.
@@ -32,6 +34,8 @@ exports[`builder > working with language only 1`] = `
 
 ### Do
 
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
 * Always try to early return from functions.
 
 * Use \`const\` for variables that are not reassigned.
@@ -55,6 +59,8 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 
 ### Do
 
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
 * Always try to early return from functions.
 
 * Use \`const\` for variables that are not reassigned.
@@ -69,6 +75,8 @@ exports[`builder > working with project type only 1`] = `
 ## General Guidelines
 
 ### Do
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
 
 * Always try to early return from functions.
 
