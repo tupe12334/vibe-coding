@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   lint-build-publish:
@@ -13,6 +16,8 @@ jobs:
         working-directory: builder
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -28,7 +33,18 @@ jobs:
         run: pnpm run lint
       - name: Build
         run: pnpm run build
+      - name: Check version change
+        id: version
+        run: |
+          prev=$(git show HEAD^:builder/package.json | jq -r '.version')
+          curr=$(jq -r '.version' package.json)
+          if [ "$curr" != "$prev" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Publish
+        if: github.event_name == 'push' && steps.version.outputs.changed == 'true'
         run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
