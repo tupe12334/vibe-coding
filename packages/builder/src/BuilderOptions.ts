@@ -3,6 +3,7 @@ type BaseBuilderOptions = {
   framework?: string;
   releaseSystem?: string;
   monorepoSystem?: string;
+  createdAt?: boolean;
 };
 type BuilderOptionsWithLanguage = {
   language: string;

@@ -52,4 +52,8 @@ describe("BuilderOptions", () => {
       monorepoSystem: "nx",
     });
   });
+
+  it("should accept createdAt option", () => {
+    assertType<BuilderOptions>({ createdAt: true });
+  });
 });
