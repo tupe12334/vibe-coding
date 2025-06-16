@@ -6,13 +6,13 @@
 
 - Always try to early return from functions.
 
-- Use `const` for variables that are not reassigned.
+- Use \`const\` for variables that are not reassigned.
 
 - Make sure to focus on why and not how in documentation.
 
 - Write predictable functions and make a spec file for them according to the testing library in use.
 
-- Don't use `any` in TypeScript, use `unknown` instead.
+- Don't use \`any\` in TypeScript, use \`unknown\` instead.
 
 - Don't cast types without validation.
 
@@ -22,10 +22,34 @@ Package Manager: pnpm
 
 - Use Interfaces over Types unless needed.
 
-- Use `const` over `let` unless reassignment is needed.
+- Use \`const\` over \`let\` unless reassignment is needed.
 
-- Use `===` over `==` for strict equality checks.
+- Use \`===\` over \`==\` for strict equality checks.
 
 - Use arrow functions for anonymous functions.
 
 - Use template literals for string interpolation.
+
+## Lint system (eslint)
+
+- Use ESLint to enforce code quality and style guidelines.
+
+- Fix lint issues before committing code.
+
+## Project type (lib)
+
+- Work with version control for publish the package if its publishable
+
+- Create a clear and comprehensive README.md with installation instructions, usage examples, and API documentation
+
+- Use semantic versioning (semver) for package versions
+
+- Include proper TypeScript declaration files (.d.ts) for better developer experience
+
+- Set up automated testing with good test coverage before publishing
+
+- Configure proper entry points in package.json (main, module, types fields)
+
+- Consider tree-shaking compatibility by using ES modules
+
+- Add proper keywords and description in package.json for discoverability
