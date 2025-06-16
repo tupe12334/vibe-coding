@@ -7,3 +7,8 @@ export { LintSystems, getAvailableLintSystems } from "./lint";
 export { lintSegment } from "./lint";
 export { ReleaseSystems, getAvailableReleaseSystems } from "./release";
 export { releaseSegment } from "./release";
+export {
+  MonorepoSystems,
+  getAvailableMonorepoSystems,
+  monorepoSegment,
+} from "./monorepo";

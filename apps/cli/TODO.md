@@ -1,7 +1,9 @@
 # TODOs
 
-- [ ] Remove the skip from the output segment
+1. [ ] Remove the skip from the output segment
 
-- [ ] Make the skip be the last option in the list
+2. [ ] Make the skip be the last option in the list
 
-- [ ] Add to the CI running lint, test and build steps for the cli as like the builder
+3. [ ] Add to the CI running lint, test and build steps for the cli as like the builder
+
+4. [ ] Add option to select monorepo management system.
