@@ -16,6 +16,8 @@
 
 - Don't cast types without validation.
 
+- Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
 Package Manager: pnpm
 
 ## Programming language (typescript)
