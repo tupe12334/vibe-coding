@@ -18,6 +18,8 @@
 
 - Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+- Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 Package Manager: pnpm
 
 ## Programming language (typescript)
@@ -55,3 +57,7 @@ Package Manager: pnpm
 - Consider tree-shaking compatibility by using ES modules
 
 - Add proper keywords and description in package.json for discoverability
+
+## Release system (release-it)
+
+- Use release-it for interactive version management and publishing.

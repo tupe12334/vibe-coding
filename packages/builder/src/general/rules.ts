@@ -7,6 +7,7 @@ export const generalRules = [
   "Don't use `any` in TypeScript, use `unknown` instead.",
   "Don't cast types without validation.",
   "Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them",
+  "Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.",
 ] as const;
 
 export type GeneralRule = (typeof generalRules)[number];
