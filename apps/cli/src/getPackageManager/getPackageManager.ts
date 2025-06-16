@@ -6,11 +6,11 @@ export const getPackageManager = async (language: string) => {
     message: "What package manager are you using?",
     default: "npm",
     choices: [
-      { name: "Skip", value: null },
       ...getOptions(language).map((packageManager) => ({
         name: packageManager.toUpperCase(),
         value: packageManager.toLowerCase(),
       })),
+      { name: "Skip", value: null },
     ],
   });
 };
