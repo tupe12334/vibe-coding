@@ -10,7 +10,7 @@ export const generalRules = [
   "Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.",
   "Put unit tests in the same folder as the code they test, and name them with `.spec.ts` suffix.",
   "After finishing the task make sure to run format, lint, test and build commands.",
-  "Don't use file extenstions in imports, use absolute imports instead.",
+  "Don't use file extensions in imports, use absolute imports instead.",
 ] as const;
 
 export type GeneralRule = (typeof generalRules)[number];

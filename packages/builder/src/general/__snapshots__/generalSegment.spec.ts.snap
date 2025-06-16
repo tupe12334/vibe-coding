@@ -172,7 +172,7 @@ exports[`generalSegment > returns general guidelines 1`] = `
         "children": [
           {
             "type": "text",
-            "value": "Don't use file extenstions in imports, use absolute imports instead.",
+            "value": "Don't use file extensions in imports, use absolute imports instead.",
           },
         ],
         "type": "paragraph",
