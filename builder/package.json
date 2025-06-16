@@ -36,6 +36,9 @@
   "dependencies": {
     "mdast-util-to-markdown": "^2.1.2"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "release-it": {
     "git": {
       "tagName": "v${version}",
