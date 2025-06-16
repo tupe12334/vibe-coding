@@ -21,10 +21,21 @@ export const frameworkSegment = async (
         { type: "text", value: ` (${framework})` },
       ],
     },
-    ...frameworkItems.map((item: string) => ({
-      type: "listItem",
-      children: [{ type: "text", value: item }],
-    })),
+    {
+      type: "list",
+      ordered: false,
+      spread: false,
+      children: frameworkItems.map((item: string) => ({
+        type: "listItem",
+        spread: false,
+        children: [
+          {
+            type: "paragraph",
+            children: [{ type: "text", value: item }],
+          },
+        ],
+      })),
+    },
   ];
 
   return frameworkSegment;
