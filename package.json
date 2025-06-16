@@ -1,0 +1,10 @@
+{
+  "name": "vibe-coding",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.12.1",
+  "workspaces": [
+    "builder",
+    "cli"
+  ]
+}
