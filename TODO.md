@@ -5,3 +5,5 @@
 - [ ] Convert the builder files that hold the rules from jsno to typescript, Type-safe files.
 
 - [ ] Make the ui-lib be a superset of the lib project so when ever the ui-lib is been selected it will also include the lib rules.
+
+- [ ] Add testing to the CI pipeline, The tests should be run on the builder project and the lib project.
