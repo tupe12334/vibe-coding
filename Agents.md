@@ -20,6 +20,8 @@
 
 - Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+- Put unit tests in the same folder as the code they test, and name them with \`.spec.ts\` suffix.
+
 Package Manager: pnpm
 
 ## Programming language (typescript)
