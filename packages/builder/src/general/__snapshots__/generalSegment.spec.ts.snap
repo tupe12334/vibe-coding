@@ -152,5 +152,19 @@ exports[`generalSegment > returns general guidelines 1`] = `
     ],
     "type": "listItem",
   },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "After finishing the task make sure to run format, lint, test and build commands.",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "listItem",
+  },
 ]
 `;

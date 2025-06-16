@@ -25,6 +25,8 @@ exports[`builder > working with all options including framework 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -84,6 +86,8 @@ exports[`builder > working with cicd system only 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 CI/CD system: github-actions
 "
 `;
@@ -113,6 +117,8 @@ exports[`builder > working with createdAt option 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 Created at: 2020-01-01T00:00:00.000Z
 "
 `;
@@ -141,6 +147,8 @@ exports[`builder > working with framework only - nestjs 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Framework (nestjs)
 
@@ -173,6 +181,8 @@ exports[`builder > working with framework only - react 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
@@ -203,6 +213,8 @@ exports[`builder > working with language and lint system 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Programming language (javascript)
 
@@ -247,6 +259,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -288,6 +302,8 @@ exports[`builder > working with language only 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 ## Programming language (javascript)
 
 * Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
@@ -324,6 +340,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Programming language (typescript)
 
@@ -363,6 +381,8 @@ exports[`builder > working with language, project type and framework 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Programming language (typescript)
 
@@ -411,6 +431,8 @@ exports[`builder > working with monorepo system only 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 Monorepo system: turbo
 "
 `;
@@ -439,6 +461,8 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 "
 `;
 
@@ -466,6 +490,8 @@ exports[`builder > working with project type and cicd system 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 CI/CD system: gitlab-ci
 
@@ -514,6 +540,8 @@ exports[`builder > working with project type and framework - backend with nestjs
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 ## Project type (backend)
 
 * Always validate endpoint request data.
@@ -548,6 +576,8 @@ exports[`builder > working with project type and framework - frontend with react
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Project type (frontend)
 
@@ -587,6 +617,8 @@ exports[`builder > working with project type and monorepo system 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 Monorepo system: nx
 
@@ -634,6 +666,8 @@ exports[`builder > working with project type and release system 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Project type (lib)
 
@@ -684,6 +718,8 @@ exports[`builder > working with project type lib 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 ## Project type (lib)
 
 * Work with version control for publish the package if its publishable
@@ -728,6 +764,8 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Programming language (typescript)
 
@@ -786,6 +824,8 @@ exports[`builder > working with project type only 1`] = `
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
+* After finishing the task make sure to run format, lint, test and build commands.
+
 ## Project type (frontend)
 
 * Prefer working with flex layouts for responsive design.
@@ -820,6 +860,8 @@ exports[`builder > working with project type ui-lib 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Project type (ui-lib)
 
@@ -882,6 +924,8 @@ exports[`builder > working with release system only 1`] = `
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
 
 ## Release system (release-it)
 
