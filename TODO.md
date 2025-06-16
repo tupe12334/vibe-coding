@@ -7,7 +7,6 @@
 - [ ] When building a lib or any of its subsets, let the user choose also the publishing manager, for example: release-it and semantic-release
 
 - [ ] Make the publish step for the builder to run in dry run, wait for a dev ik and only then publish the package.
-
-- [ ] Implement turbo repo to the project.
+- [x] Implement turbo repo to the project.
 
 - [ ] Remove .spec file from type checking and building
