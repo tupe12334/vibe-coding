@@ -7,6 +7,7 @@ import { getFramework } from "./getFramework";
 import { getLintSystem } from "./getLintSystem";
 import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
+import { getReleaseSystem } from "./getReleaseSystem";
 
 export const main = async () => {
   let builderOptions: BuilderOptions = {};
@@ -21,6 +22,11 @@ export const main = async () => {
   }
 
   builderOptions.projectType = await getProjectType() ?? undefined;
+
+  if (builderOptions.projectType &&
+      ["lib", "ui-lib"].includes(builderOptions.projectType)) {
+    builderOptions.releaseSystem = await getReleaseSystem();
+  }
 
   // Get framework based on selected project type
   if (builderOptions.projectType) {

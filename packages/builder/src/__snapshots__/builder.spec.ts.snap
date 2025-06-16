@@ -21,6 +21,8 @@ exports[`builder > working with all options including framework 1`] = `
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -76,6 +78,8 @@ exports[`builder > working with framework only - nestjs 1`] = `
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 ## Framework (nestjs)
 
 * Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities.
@@ -103,6 +107,8 @@ exports[`builder > working with framework only - react 1`] = `
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
@@ -129,6 +135,8 @@ exports[`builder > working with language and lint system 1`] = `
 * Don't cast types without validation.
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 ## Programming language (javascript)
 
@@ -169,6 +177,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -206,6 +216,8 @@ exports[`builder > working with language only 1`] = `
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 ## Programming language (javascript)
 
 * Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
@@ -238,6 +250,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Don't cast types without validation.
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 ## Programming language (typescript)
 
@@ -273,6 +287,8 @@ exports[`builder > working with language, project type and framework 1`] = `
 * Don't cast types without validation.
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 ## Programming language (typescript)
 
@@ -316,6 +332,8 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Don't cast types without validation.
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 "
 `;
 
@@ -339,6 +357,8 @@ exports[`builder > working with project type and framework - backend with nestjs
 * Don't cast types without validation.
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 ## Project type (backend)
 
@@ -371,6 +391,8 @@ exports[`builder > working with project type and framework - frontend with react
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 ## Project type (frontend)
 
 * Prefer working with flex layouts for responsive design.
@@ -382,6 +404,53 @@ exports[`builder > working with project type and framework - frontend with react
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
+"
+`;
+
+exports[`builder > working with project type and release system 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \\\`const\\\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
+
+* Don't cast types without validation.
+
+* Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+## Project type (lib)
+
+* Work with version control for publish the package if its publishable
+
+* Create a clear and comprehensive README.md with installation instructions, usage examples, and API documentation
+
+* Use semantic versioning (semver) for package versions
+
+* Include proper TypeScript declaration files (.d.ts) for better developer experience
+
+* Set up automated testing with good test coverage before publishing
+
+* Configure proper entry points in package.json (main, module, types fields)
+
+* Consider tree-shaking compatibility by using ES modules
+
+* Add proper keywords and description in package.json for discoverability
+
+## Release system (semantic-release)
+
+* Use semantic-release for automated versioning and changelog generation.
 "
 `;
 
@@ -405,6 +474,8 @@ exports[`builder > working with project type lib 1`] = `
 * Don't cast types without validation.
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 ## Project type (lib)
 
@@ -446,6 +517,8 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 * Don't cast types without validation.
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
 ## Programming language (typescript)
 
@@ -500,6 +573,8 @@ exports[`builder > working with project type only 1`] = `
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 ## Project type (frontend)
 
 * Prefer working with flex layouts for responsive design.
@@ -531,6 +606,8 @@ exports[`builder > working with project type ui-lib 1`] = `
 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
 ## Project type (ui-lib)
 
 * Prefer working with flex
@@ -549,5 +626,34 @@ exports[`builder > working with project type ui-lib 1`] = `
   &#x20;   \\- \\\`\\<ComponentName>.test.tsx\\\`: Contains tests for the component.
   &#x20;   \\- \\\`\\<ComponentName>.stories.tsx\\\`: Contains Storybook stories for the component.
   \\- \\\`src/index.ts\\\`: Exports all components for easy import.
+"
+`;
+
+exports[`builder > working with release system only 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \\\`const\\\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
+
+* Don't cast types without validation.
+
+* Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+## Release system (release-it)
+
+* Use release-it for interactive version management and publishing.
 "
 `;
