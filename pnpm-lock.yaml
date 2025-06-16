@@ -15,7 +15,7 @@ importers:
         version: 7.5.3(@types/node@24.0.3)
       '@vibe-builder/builder':
         specifier: workspace:^
-        version: link:../../builder
+        version: link:../../packages/builder
     devDependencies:
       '@types/node':
         specifier: ^24.0.1
@@ -24,7 +24,7 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
 
-  builder:
+  packages/builder:
     dependencies:
       mdast-util-to-markdown:
         specifier: ^2.1.2

@@ -5,7 +5,8 @@ export const generalRules = [
   "Make sure to focus on why and not how in documentation.",
   "Write predictable functions and make a spec file for them according to the testing library in use.",
   "Don't use `any` in TypeScript, use `unknown` instead.",
-  "Don't cast types without validation."
+  "Don't cast types without validation.",
+  "Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them",
 ] as const;
 
 export type GeneralRule = (typeof generalRules)[number];

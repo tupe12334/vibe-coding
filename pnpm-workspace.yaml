@@ -1,5 +1,5 @@
 packages:
-  - builder
+  - packages/builder
   - apps/cli
 
 onlyBuiltDependencies:
