@@ -5,6 +5,6 @@
   "packageManager": "pnpm@10.12.1",
   "workspaces": [
     "packages/builder",
-    "cli"
+    "apps/cli"
   ]
 }

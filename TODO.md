@@ -10,4 +10,4 @@
 
 - [x] Move the builder package to a packages folder, don't forget to update the CI/CD pipeline to use the new path.
 
-- [ ] Move the cli to an apps folder.
+- [x] Move the cli to an apps folder.
