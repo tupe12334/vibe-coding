@@ -11,3 +11,4 @@
 5. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
 
 6. [x] Add segment for CI/CD framework, like github actions, gitlab ci, circleci, etc. and then add the option to select the CI/CD system in the builder, it will be like the monorepo management system only, without rules.
+7. Add a project type of e2e testing, it will have the frameworks: playwright and cypress, two rules for now to the e2e testing project will be using of Page object model (POM) and a rule that says to use screenshots testing when possible.
