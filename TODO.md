@@ -9,6 +9,5 @@
 
 - [ ] When building a lib or any of its subsets, let the user choose also the publishing manager, for example: release-it and semantic-release
 
-- [x] Add option to skip any step of the cli.
 
 - [ ] Make the publish step for the builder to run in dry run, wait for a dev ik and only then publish the package.

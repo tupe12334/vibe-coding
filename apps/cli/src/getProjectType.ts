@@ -8,9 +8,12 @@ export const getProjectType = async () => {
   return select({
     message: "What type of project are you working on?",
     default: "frontend",
-    choices: ProjectTypes.map((project) => ({
-      name: project,
-      value: project.toLowerCase(),
-    })),
+    choices: [
+      { name: "Skip", value: null },
+      ...ProjectTypes.map((project) => ({
+        name: project,
+        value: project.toLowerCase(),
+      })),
+    ],
   });
 };
