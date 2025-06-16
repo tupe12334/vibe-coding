@@ -1,6 +1,6 @@
 packages:
   - builder
-  - cli
+  - apps/cli
 
 onlyBuiltDependencies:
   - esbuild
