@@ -23,6 +23,8 @@ exports[`builder > working with all options including framework 1`] = `
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -80,6 +82,8 @@ exports[`builder > working with framework only - nestjs 1`] = `
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
 ## Framework (nestjs)
 
 * Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities.
@@ -109,6 +113,8 @@ exports[`builder > working with framework only - react 1`] = `
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
@@ -137,6 +143,8 @@ exports[`builder > working with language and lint system 1`] = `
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Programming language (javascript)
 
@@ -179,6 +187,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -218,6 +228,8 @@ exports[`builder > working with language only 1`] = `
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
 ## Programming language (javascript)
 
 * Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
@@ -252,6 +264,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Programming language (typescript)
 
@@ -289,6 +303,8 @@ exports[`builder > working with language, project type and framework 1`] = `
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Programming language (typescript)
 
@@ -334,6 +350,8 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 "
 `;
 
@@ -359,6 +377,8 @@ exports[`builder > working with project type and framework - backend with nestjs
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Project type (backend)
 
@@ -392,6 +412,8 @@ exports[`builder > working with project type and framework - frontend with react
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Project type (frontend)
 
@@ -429,6 +451,8 @@ exports[`builder > working with project type and release system 1`] = `
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Project type (lib)
 
@@ -477,6 +501,8 @@ exports[`builder > working with project type lib 1`] = `
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
 ## Project type (lib)
 
 * Work with version control for publish the package if its publishable
@@ -519,6 +545,8 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Programming language (typescript)
 
@@ -575,6 +603,8 @@ exports[`builder > working with project type only 1`] = `
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
 
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
 ## Project type (frontend)
 
 * Prefer working with flex layouts for responsive design.
@@ -607,6 +637,8 @@ exports[`builder > working with project type ui-lib 1`] = `
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Project type (ui-lib)
 
@@ -651,6 +683,8 @@ exports[`builder > working with release system only 1`] = `
 * Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
 
 * Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 ## Release system (release-it)
 
