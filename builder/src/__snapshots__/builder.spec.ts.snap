@@ -25,9 +25,9 @@ Package Manager: npm
 
 * Use Interfaces over Types unless needed.
 
-* Use \`const\` over \`let\` unless reassignment is needed.
+* Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
 
-* Use \`===\` over \`==\` for strict equality checks.
+* Use \\\`===\\\` over \\\`==\\\` for strict equality checks.
 
 * Use arrow functions for anonymous functions.
 
@@ -122,9 +122,9 @@ Package Manager: npm
 
 * Use Interfaces over Types unless needed.
 
-* Use \`const\` over \`let\` unless reassignment is needed.
+* Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
 
-* Use \`===\` over \`==\` for strict equality checks.
+* Use \\\`===\\\` over \\\`==\\\` for strict equality checks.
 
 * Use arrow functions for anonymous functions.
 
@@ -153,9 +153,9 @@ exports[`builder > working with language only 1`] = `
 
 ## Programming language (javascript)
 
-* Use \`const\` over \`let\` unless reassignment is needed.
+* Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
 
-* Use \`===\` over \`==\` for strict equality checks.
+* Use \\\`===\\\` over \\\`==\\\` for strict equality checks.
 
 * Use arrow functions for anonymous functions.
 
@@ -186,9 +186,9 @@ exports[`builder > working with language only with a language that is superset 1
 
 * Use Interfaces over Types unless needed.
 
-* Use \`const\` over \`let\` unless reassignment is needed.
+* Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
 
-* Use \`===\` over \`==\` for strict equality checks.
+* Use \\\`===\\\` over \\\`==\\\` for strict equality checks.
 
 * Use arrow functions for anonymous functions.
 
@@ -219,9 +219,9 @@ exports[`builder > working with language, project type and framework 1`] = `
 
 * Use Interfaces over Types unless needed.
 
-* Use \`const\` over \`let\` unless reassignment is needed.
+* Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
 
-* Use \`===\` over \`==\` for strict equality checks.
+* Use \\\`===\\\` over \\\`==\\\` for strict equality checks.
 
 * Use arrow functions for anonymous functions.
 
@@ -382,9 +382,9 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 
 * Use Interfaces over Types unless needed.
 
-* Use \`const\` over \`let\` unless reassignment is needed.
+* Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
 
-* Use \`===\` over \`==\` for strict equality checks.
+* Use \\\`===\\\` over \\\`==\\\` for strict equality checks.
 
 * Use arrow functions for anonymous functions.
 
