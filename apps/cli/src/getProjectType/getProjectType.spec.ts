@@ -1,18 +1,40 @@
-import { describe, expect, test, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+import { select } from "@inquirer/prompts";
+import { projectTypes } from "./types";
 
 vi.mock("@inquirer/prompts", () => ({
-  select: vi.fn(() => Promise.resolve("frontend")),
+  select: vi.fn(),
 }));
-import { select } from "@inquirer/prompts";
 
 import { getProjectType } from "./getProjectType";
 
 describe("getProjectType", () => {
-  test("returns selected project type", async () => {
+  it("prompts user with project type options", async () => {
+    const selectMock = vi.mocked(select);
+    selectMock.mockResolvedValueOnce("frontend");
+
     const result = await getProjectType();
 
     expect(result).toBe("frontend");
-    // ensure that the prompt module was invoked
-    expect(vi.mocked(select).mock.calls.length).toBe(1);
+    expect(selectMock).toHaveBeenCalledWith({
+      message: "What type of project are you working on?",
+      default: "frontend",
+      choices: [
+        ...projectTypes.map((project) => ({
+          name: project,
+          value: project,
+        })),
+        { name: "Skip", value: null },
+      ],
+    });
+  });
+
+  it("returns null when skip is chosen", async () => {
+    const selectMock = vi.mocked(select);
+    selectMock.mockResolvedValueOnce(null);
+
+    const result = await getProjectType();
+
+    expect(result).toBeNull();
   });
 });
