@@ -52,4 +52,12 @@ describe("BuilderOptions", () => {
       monorepoSystem: "nx",
     });
   });
+
+  it("should accept cicdSystem without restrictions", () => {
+    assertType<BuilderOptions>({ cicdSystem: "github-actions" });
+    assertType<BuilderOptions>({
+      projectType: "lib",
+      cicdSystem: "gitlab-ci",
+    });
+  });
 });

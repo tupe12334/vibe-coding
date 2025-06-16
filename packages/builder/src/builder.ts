@@ -7,6 +7,7 @@ import { frameworkSegment } from "./framework/frameworkSegment";
 import { lintSegment } from "./lint/lintSegment";
 import { releaseSegment } from "./release/releaseSegment";
 import { monorepoSegment } from "./monorepo/monorepoSegment";
+import { cicdSegment } from "./cicd/cicdSegment";
 import { BuilderOptions } from "./BuilderOptions";
 
 export async function builder(options?: BuilderOptions): Promise<string> {
@@ -32,6 +33,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     lintSystem,
     releaseSystem,
     monorepoSystem,
+    cicdSystem,
   } = options;
   if (packageManager) {
     tree.children.push({
@@ -49,6 +51,10 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     tree.children = tree.children.concat(
       await monorepoSegment(monorepoSystem)
     );
+  }
+
+  if (cicdSystem) {
+    tree.children = tree.children.concat(await cicdSegment(cicdSystem));
   }
 
   if (language) {
