@@ -5,13 +5,16 @@ import { projectTypes } from "./types";
 /**
  * Prompt the user to choose a project type so later steps can be tailored.
  */
-export const getProjectType = async (): Promise<ProjectType> => {
+export const getProjectType = async (): Promise<ProjectType | null> => {
   return select({
     message: "What type of project are you working on?",
     default: "frontend",
-    choices: projectTypes.map((project) => ({
-      name: project,
-      value: project,
-    })),
+    choices: [
+      ...projectTypes.map((project) => ({
+        name: project,
+        value: project,
+      })),
+      { name: "Skip", value: null },
+    ],
   });
 };
