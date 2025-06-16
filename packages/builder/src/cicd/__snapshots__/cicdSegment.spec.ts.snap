@@ -24,35 +24,7 @@ exports[`cicdSegment > returns cicd guidelines 1`] = `
             "children": [
               {
                 "type": "text",
-                "value": "CI process should run lint step.",
-              },
-            ],
-            "type": "paragraph",
-          },
-        ],
-        "type": "listItem",
-      },
-      {
-        "children": [
-          {
-            "children": [
-              {
-                "type": "text",
-                "value": "CI process should run tests.",
-              },
-            ],
-            "type": "paragraph",
-          },
-        ],
-        "type": "listItem",
-      },
-      {
-        "children": [
-          {
-            "children": [
-              {
-                "type": "text",
-                "value": "CI process should build the project.",
+                "value": "CI process should run lint, test and steps preferably in parallel if posable.",
               },
             ],
             "type": "paragraph",

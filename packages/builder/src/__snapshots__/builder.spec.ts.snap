@@ -94,11 +94,7 @@ exports[`builder > working with cicd system only 1`] = `
 
 ## CI/CD system (github-actions)
 
-* CI process should run lint step.
-
-* CI process should run tests.
-
-* CI process should build the project.
+* CI process should run lint, test and steps preferably in parallel if posable.
 
 * CD process should use the defined release system.
 "
@@ -529,11 +525,7 @@ exports[`builder > working with project type and cicd system 1`] = `
 
 ## CI/CD system (gitlab-ci)
 
-* CI process should run lint step.
-
-* CI process should run tests.
-
-* CI process should build the project.
+* CI process should run lint, test and steps preferably in parallel if posable.
 
 * CD process should use the defined release system.
 
