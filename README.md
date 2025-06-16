@@ -4,6 +4,11 @@
 
 This repository is a collection of Agents coding prompts for better vibe coding experience.
 
+The project is organized as a **pnpm monorepo**:
+
+- `apps/` contains runnable applications.
+- `packages/` contains shared packages like the builder.
+
 ## Usage
 
 To use the prompts you have two options:
