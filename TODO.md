@@ -8,6 +8,6 @@
 
 - [x] Convert the repository to pnpm monorepo, don't move the folders.
 
-- [ ] Move the builder package to a packages folder, don't forget to update the CI/CD pipeline to use the new path.
+- [x] Move the builder package to a packages folder, don't forget to update the CI/CD pipeline to use the new path.
 
 - [ ] Move the cli to an apps folder.
