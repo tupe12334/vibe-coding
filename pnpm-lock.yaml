@@ -26,6 +26,9 @@ importers:
       typescript:
         specifier: ~5.1.6
         version: 5.1.6
+      vitest:
+        specifier: ^3.2.3
+        version: 3.2.3(@types/node@24.0.3)(@vitest/ui@3.2.3)(jiti@2.4.2)
 
   packages/builder:
     dependencies:
