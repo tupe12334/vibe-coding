@@ -9,9 +9,9 @@ export const getLintSystem = async (language: string) => {
   }
 
   const choices = [
-    { name: "Skip", value: null },
     { name: "None", value: null },
     ...available.map((lint) => ({ name: lint, value: lint })),
+    { name: "Skip", value: null },
   ];
 
   return select({
