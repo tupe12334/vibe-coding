@@ -6,11 +6,11 @@ export const getLanguage = async () => {
     message: "Programming languages of the project?",
     default: "typescript",
     choices: [
-      { name: "Skip", value: null },
       ...Languages.map((lang) => ({
         name: lang.name,
         value: lang.name.toLowerCase(),
       })),
+      { name: "Skip", value: null },
     ],
   });
 };
