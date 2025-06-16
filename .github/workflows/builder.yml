@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   lint-build-publish:
@@ -29,6 +32,7 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Publish
+        if: github.event_name == 'push'
         run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
