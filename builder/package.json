@@ -1,7 +1,6 @@
 {
   "name": "@vibe-builder/builder",
   "version": "0.1.0",
-  "private": false,
   "description": "Generate Vibe coding agent instructions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
