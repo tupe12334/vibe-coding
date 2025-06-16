@@ -15,7 +15,7 @@ export const main = async () => {
     builderOptions = {
       ...builderOptions,
       language,
-      packageManager: await getPackageManager(language),
+      packageManager: (await getPackageManager(language)) ?? undefined,
       lintSystem: (await getLintSystem(language)) ?? undefined,
     };
   }
