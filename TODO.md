@@ -9,3 +9,5 @@
 4. [ ] Covert the CI/CD to work with the release system release-it
 
 5. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
+
+6. [ ] Add segment for CI/CD framework, like github actions, gitlab ci, circleci, etc. and then add the option to select the CI/CD system in the builder, it will be like the monorepo management system only, without rules.
