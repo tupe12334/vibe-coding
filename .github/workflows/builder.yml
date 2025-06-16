@@ -82,9 +82,6 @@ jobs:
     needs: [lint, build, test]
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: packages/builder
     steps:
       - uses: actions/checkout@v4
         with:
@@ -101,7 +98,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Publish
-        run: pnpm --filter ./packages/builder run release -- --ci
+        run: pnpm --filter @vibe-builder/builder run release -- --ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
