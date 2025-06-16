@@ -10,4 +10,4 @@
 
 5. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
 
-6. [ ] Add option to skip to all segments.
+6. [x] Add option to skip to all segments.
