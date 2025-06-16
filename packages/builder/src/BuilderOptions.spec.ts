@@ -11,7 +11,7 @@ describe("BuilderOptions", () => {
     assertType<BuilderOptions>({ language: "typescript" });
     assertType<BuilderOptions>({ language: "java" });
   });
-  
+
   it("should accept packageManager only when language is defined", () => {
     // @ts-expect-error wrong types
     assertType<BuilderOptions>({

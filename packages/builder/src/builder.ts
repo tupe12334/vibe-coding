@@ -50,9 +50,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
   }
 
   if (monorepoSystem) {
-    tree.children = tree.children.concat(
-      await monorepoSegment(monorepoSystem)
-    );
+    tree.children = tree.children.concat(await monorepoSegment(monorepoSystem));
   }
 
   if (cicdSystem) {
