@@ -3,8 +3,9 @@ import { backendRules } from "./backend";
 import { frontendRules } from "./frontend";
 import { libRules } from "./lib";
 import { uiLibRules } from "./ui-lib";
+import { ProjectTypes } from "./options";
 
-const projectRulesMap: Record<string, string[]> = {
+const projectRulesMap: Record<string, readonly string[]> = {
   backend: backendRules,
   frontend: frontendRules,
   lib: libRules,
@@ -14,7 +15,15 @@ const projectRulesMap: Record<string, string[]> = {
 export const projectSegment = async (
   projectType: string
 ): Promise<RootContent[]> => {
-  const projectItems = projectRulesMap[projectType] || [];
+  let projectItems = projectRulesMap[projectType] ?? [];
+
+  const projectConfig = ProjectTypes.find((p) => p.name === projectType);
+  if (projectConfig?.subset) {
+    for (const subset of projectConfig.subset) {
+      const subsetItems = projectRulesMap[subset] ?? [];
+      projectItems = projectItems.concat(subsetItems);
+    }
+  }
 
   const projectSegment: RootContent[] = [
     {
