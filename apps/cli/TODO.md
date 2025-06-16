@@ -11,3 +11,5 @@
 5. [ ] Add publish step to the CI, the same as the builder.
 
 6. [ ] Add option to skip release system.
+
+7. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
