@@ -7,22 +7,28 @@ import { getFramework } from "./getFramework";
 import { getLintSystem } from "./getLintSystem";
 import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
+import { skipStep } from "./skipStep";
 
 export const main = async () => {
   let builderOptions: BuilderOptions = {};
-  const language = await getLanguage();
-  if (language) {
-    builderOptions = {
-      ...builderOptions,
-      language,
-      packageManager: await getPackageManager(language),
-      lintSystem: await getLintSystem(language) ?? undefined,
-    };
+  if (!(await skipStep("language selection"))) {
+    const language = await getLanguage();
+    if (language) {
+      builderOptions = {
+        ...builderOptions,
+        language,
+        packageManager: await getPackageManager(language),
+        lintSystem: (await getLintSystem(language)) ?? undefined,
+      };
+    }
   }
-  builderOptions.projectType = await getProjectType();
+
+  if (!(await skipStep("project type selection"))) {
+    builderOptions.projectType = await getProjectType();
+  }
 
   // Get framework based on selected project type
-  if (builderOptions.projectType) {
+  if (builderOptions.projectType && !(await skipStep("framework selection"))) {
     const framework = await getFramework(builderOptions.projectType);
     if (framework) {
       builderOptions.framework = framework;
@@ -30,7 +36,10 @@ export const main = async () => {
   }
 
   const mdFile = await builder(builderOptions);
-  const path = await outputPath();
+  let path = process.cwd();
+  if (!(await skipStep("output path"))) {
+    path = await outputPath();
+  }
   await writeFile(`${path}/Agents.md`, mdFile, "utf-8");
 };
 
