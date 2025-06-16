@@ -4,5 +4,5 @@
 
 2. [x] Fix the CI/CD to publish this package to npm.
 
-3. [ ] Add the option to add "create at" timestamp to the generated files, it will be in the end of the file and will be optional, add snapshot tests for this feature.
+3. [x] Add the option to add "create at" timestamp to the generated files, it will be in the end of the file and will be optional, add snapshot tests for this feature.
 
