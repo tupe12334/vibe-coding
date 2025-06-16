@@ -23,9 +23,14 @@ export const main = async () => {
 
   builderOptions.projectType = await getProjectType() ?? undefined;
 
-  if (builderOptions.projectType &&
-      ["lib", "ui-lib"].includes(builderOptions.projectType)) {
-    builderOptions.releaseSystem = await getReleaseSystem();
+  if (
+    builderOptions.projectType &&
+    ["lib", "ui-lib"].includes(builderOptions.projectType)
+  ) {
+    const releaseSystem = await getReleaseSystem();
+    if (releaseSystem) {
+      builderOptions.releaseSystem = releaseSystem;
+    }
   }
 
   // Get framework based on selected project type
