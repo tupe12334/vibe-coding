@@ -1,17 +1,21 @@
-import { readFile } from "fs/promises";
-import { join } from "path";
 import type { RootContent } from "mdast";
+import { backendRules } from "./backend";
+import { frontendRules } from "./frontend";
+import { libRules } from "./lib";
+import { uiLibRules } from "./ui-lib";
+
+const projectRulesMap: Record<string, string[]> = {
+  backend: backendRules,
+  frontend: frontendRules,
+  lib: libRules,
+  "ui-lib": uiLibRules,
+};
 
 export const projectSegment = async (
   templatesPath: string,
   projectType: string
 ): Promise<RootContent[]> => {
-  const projectJsonFile = (
-    await readFile(join(templatesPath, "project", `${projectType}.json`), {
-      encoding: "utf-8",
-    })
-  ).toString();
-  const projectItems = JSON.parse(projectJsonFile);
+  const projectItems = projectRulesMap[projectType] || [];
 
   const projectSegment: RootContent[] = [
     {
@@ -22,10 +26,19 @@ export const projectSegment = async (
         { type: "text", value: ` (${projectType})` },
       ],
     },
-    ...projectItems.map((item: string) => ({
-      type: "listItem",
-      children: [{ type: "text", value: item }],
-    })),
+    {
+      type: "list",
+      ordered: false,
+      children: projectItems.map((item: string) => ({
+        type: "listItem",
+        children: [
+          {
+            type: "paragraph",
+            children: [{ type: "text", value: item }],
+          },
+        ],
+      })),
+    },
   ];
 
   return projectSegment;

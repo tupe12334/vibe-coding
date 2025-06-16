@@ -466,15 +466,15 @@ exports[`builder > working with project type ui-lib 1`] = `
 
 * Folder structure:
 
-  \\- \`src/\`: Contains the source code for the components.
-  \\- \`src/<component>/\`: Contains the individual components.
-    \\- Each component has its own folder with the following structure:
-      \\- \`index.ts\`: Exports all the relevant data.
-      \\- \`<ComponentName>.tsx\`: Contains the main component code.
-      \\- \`styles.ts\`: Contains styles for the component.
-      \\- \`types.ts\`: Contains TypeScript types for the component.
-      \\- \`<ComponentName>.test.tsx\`: Contains tests for the component.
-      \\- \`<ComponentName>.stories.tsx\`: Contains Storybook stories for the component.
-  \\- \`src/index.ts\`: Exports all components for easy import.
+  \\- \\\`src/\\\`: Contains the source code for the components.
+  \\- \\\`src/\\<component>/\\\`: Contains the individual components.
+  &#x20; \\- Each component has its own folder with the following structure:
+  &#x20;   \\- \\\`index.ts\\\`: Exports all the relevant data.
+  &#x20;   \\- \\\`\\<ComponentName>.tsx\\\`: Contains the main component code.
+  &#x20;   \\- \\\`styles.ts\\\`: Contains styles for the component.
+  &#x20;   \\- \\\`types.ts\\\`: Contains TypeScript types for the component.
+  &#x20;   \\- \\\`\\<ComponentName>.test.tsx\\\`: Contains tests for the component.
+  &#x20;   \\- \\\`\\<ComponentName>.stories.tsx\\\`: Contains Storybook stories for the component.
+  \\- \\\`src/index.ts\\\`: Exports all components for easy import.
 "
 `;
