@@ -1,6 +1,5 @@
 import { Root } from "mdast";
 import { toMarkdown } from "mdast-util-to-markdown";
-import { join } from "path";
 import { generalSegment } from "./general/generalSegment";
 import { languageSegment } from "./language/languageSegment";
 import { projectSegment } from "./project/projectSegment";
@@ -18,8 +17,6 @@ export async function builder(options?: BuilderOptions): Promise<string> {
       },
     ],
   };
-  const templatesPath = join(__dirname, "../templates");
-
   tree.children = tree.children.concat(await generalSegment());
   if (options === undefined) {
     return toMarkdown(tree);
@@ -39,19 +36,19 @@ export async function builder(options?: BuilderOptions): Promise<string> {
 
   if (language) {
     tree.children = tree.children.concat(
-      await languageSegment(templatesPath, language)
+      await languageSegment("", language)
     );
   }
 
   if (projectType) {
     tree.children = tree.children.concat(
-      await projectSegment(templatesPath, projectType)
+      await projectSegment("", projectType)
     );
   }
 
   if (framework) {
     tree.children = tree.children.concat(
-      await frameworkSegment(templatesPath, framework)
+      await frameworkSegment("", framework)
     );
   }
 

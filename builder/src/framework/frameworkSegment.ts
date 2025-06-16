@@ -1,17 +1,16 @@
-import { readFile } from "fs/promises";
-import { join } from "path";
 import { RootContent } from "mdast";
+import { nestjsRules, reactRules } from "../templates/framework";
 
 export const frameworkSegment = async (
-  templatesPath: string,
+  _templatesPath: string,
   framework: string
 ): Promise<RootContent[]> => {
-  const frameworkJsonFile = (
-    await readFile(join(templatesPath, "framework", `${framework}.json`), {
-      encoding: "utf-8",
-    })
-  ).toString();
-  const frameworkItems = JSON.parse(frameworkJsonFile);
+  const frameworkRulesMap: Record<string, readonly string[]> = {
+    nestjs: nestjsRules,
+    react: reactRules,
+  };
+
+  const frameworkItems = frameworkRulesMap[framework] || [];
 
   const frameworkSegment: RootContent[] = [
     {
