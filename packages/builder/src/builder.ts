@@ -6,6 +6,7 @@ import { projectSegment } from "./project/projectSegment";
 import { frameworkSegment } from "./framework/frameworkSegment";
 import { lintSegment } from "./lint/lintSegment";
 import { releaseSegment } from "./release/releaseSegment";
+import { monorepoSegment } from "./monorepo/monorepoSegment";
 import { BuilderOptions } from "./BuilderOptions";
 
 export async function builder(options?: BuilderOptions): Promise<string> {
@@ -30,6 +31,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     framework,
     lintSystem,
     releaseSystem,
+    monorepoSystem,
   } = options;
   if (packageManager) {
     tree.children.push({
@@ -41,6 +43,12 @@ export async function builder(options?: BuilderOptions): Promise<string> {
         },
       ],
     });
+  }
+
+  if (monorepoSystem) {
+    tree.children = tree.children.concat(
+      await monorepoSegment(monorepoSystem)
+    );
   }
 
   if (language) {

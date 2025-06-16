@@ -44,4 +44,12 @@ describe("BuilderOptions", () => {
       releaseSystem: "semantic-release",
     });
   });
+
+  it("should accept monorepoSystem without restrictions", () => {
+    assertType<BuilderOptions>({ monorepoSystem: "turbo" });
+    assertType<BuilderOptions>({
+      projectType: "lib",
+      monorepoSystem: "nx",
+    });
+  });
 });

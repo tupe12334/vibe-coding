@@ -115,6 +115,21 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with monorepo system only", async () => {
+    const response = await builder({ monorepoSystem: "turbo" });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with project type and monorepo system", async () => {
+    const response = await builder({
+      projectType: "lib",
+      monorepoSystem: "nx",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with all options including framework", async () => {
     const response = await builder({
       language: "typescript",

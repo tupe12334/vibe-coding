@@ -2,6 +2,7 @@ type BaseBuilderOptions = {
   projectType?: string;
   framework?: string;
   releaseSystem?: string;
+  monorepoSystem?: string;
 };
 type BuilderOptionsWithLanguage = {
   language: string;
