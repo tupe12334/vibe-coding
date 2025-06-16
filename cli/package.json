@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "prebuild": "rimraf dist"
+    "prebuild": "rimraf dist",
+    "start:cli": "node dist/main.js"
   },
   "bin": {
     "vibe-builder": "dist/main.js"
