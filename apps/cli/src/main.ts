@@ -8,6 +8,7 @@ import { getLintSystem } from "./getLintSystem";
 import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
 import { getReleaseSystem } from "./getReleaseSystem";
+import { getMonorepoSystem } from "./getMonorepoSystem";
 
 export const main = async () => {
   let builderOptions: BuilderOptions = {};
@@ -31,6 +32,11 @@ export const main = async () => {
     if (releaseSystem) {
       builderOptions.releaseSystem = releaseSystem;
     }
+  }
+
+  const monorepoSystem = await getMonorepoSystem();
+  if (monorepoSystem) {
+    builderOptions.monorepoSystem = monorepoSystem;
   }
 
   // Get framework based on selected project type
