@@ -1,15 +1,82 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`cicdSegment > returns cicd system line 1`] = `
+exports[`cicdSegment > returns cicd guidelines 1`] = `
 [
   {
     "children": [
       {
         "type": "text",
-        "value": "CI/CD system: github-actions",
+        "value": "CI/CD system",
+      },
+      {
+        "type": "text",
+        "value": " (github-actions)",
       },
     ],
-    "type": "paragraph",
+    "depth": 2,
+    "type": "heading",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "CI process should run lint step.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "CI process should run tests.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "CI process should build the project.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "CD process should use the defined release system.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+    ],
+    "ordered": false,
+    "type": "list",
   },
 ]
 `;
