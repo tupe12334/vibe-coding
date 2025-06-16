@@ -7,9 +7,10 @@ export const outputPath = async () => {
     choices: [
       { value: true, name: "Specific path" },
       { value: false, name: "Default path" },
+      { value: null, name: "Skip" },
     ],
   });
-  if (specificPath === false) {
+  if (specificPath === false || specificPath === null) {
     return cwd();
   }
   const path = await input({

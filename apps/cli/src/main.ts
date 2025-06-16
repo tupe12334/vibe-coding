@@ -16,11 +16,12 @@ export const main = async () => {
     builderOptions = {
       ...builderOptions,
       language,
-      packageManager: await getPackageManager(language),
-      lintSystem: await getLintSystem(language) ?? undefined,
+      packageManager: (await getPackageManager(language)) ?? undefined,
+      lintSystem: (await getLintSystem(language)) ?? undefined,
     };
   }
-  builderOptions.projectType = await getProjectType();
+
+  builderOptions.projectType = await getProjectType() ?? undefined;
 
   if (builderOptions.projectType &&
       ["lib", "ui-lib"].includes(builderOptions.projectType)) {

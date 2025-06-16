@@ -10,7 +10,8 @@
     "build": "tsc",
     "prebuild": "rimraf dist",
     "start:cli": "node dist/main.js",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
   "bin": {
     "vibe-builder": "dist/main.js"
