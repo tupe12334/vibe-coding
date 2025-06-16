@@ -42,7 +42,7 @@ importers:
         specifier: ^7.5.3
         version: 7.5.3(@types/node@24.0.3)
       '@vibe-builder/builder':
-        specifier: file:../builder
+        specifier: workspace:^
         version: link:../builder
     devDependencies:
       '@types/node':
