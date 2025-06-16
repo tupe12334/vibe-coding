@@ -17,3 +17,4 @@ export {
   getAvailableCICDSystems,
   cicdSegment,
 } from "./cicd";
+export { createdAtSegment } from "./createdAt";

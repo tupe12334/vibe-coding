@@ -9,6 +9,7 @@ import { releaseSegment } from "./release/releaseSegment";
 import { monorepoSegment } from "./monorepo/monorepoSegment";
 import { cicdSegment } from "./cicd/cicdSegment";
 import { BuilderOptions } from "./BuilderOptions";
+import { createdAtSegment } from "./createdAt/createdAtSegment";
 
 export async function builder(options?: BuilderOptions): Promise<string> {
   const tree: Root = {
@@ -34,6 +35,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     releaseSystem,
     monorepoSystem,
     cicdSystem,
+    createdAt,
   } = options;
   if (packageManager) {
     tree.children.push({
@@ -74,6 +76,10 @@ export async function builder(options?: BuilderOptions): Promise<string> {
 
   if (releaseSystem) {
     tree.children = tree.children.concat(await releaseSegment(releaseSystem));
+  }
+
+  if (createdAt) {
+    tree.children = tree.children.concat(await createdAtSegment());
   }
 
   return toMarkdown(tree);

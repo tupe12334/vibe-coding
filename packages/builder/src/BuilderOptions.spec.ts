@@ -60,4 +60,7 @@ describe("BuilderOptions", () => {
       cicdSystem: "gitlab-ci",
     });
   });
+  it("should accept createdAt option", () => {
+    assertType<BuilderOptions>({ createdAt: true });
+  });
 });

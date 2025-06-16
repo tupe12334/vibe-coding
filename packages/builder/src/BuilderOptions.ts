@@ -4,6 +4,7 @@ type BaseBuilderOptions = {
   releaseSystem?: string;
   monorepoSystem?: string;
   cicdSystem?: string;
+  createdAt?: boolean;
 };
 type BuilderOptionsWithLanguage = {
   language: string;

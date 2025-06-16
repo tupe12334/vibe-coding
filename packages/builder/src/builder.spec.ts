@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, test, vi } from "vitest";
 import { builder } from "./builder";
 describe("builder", () => {
   test("working with no arguments returns general segment only", async () => {
@@ -155,5 +155,14 @@ describe("builder", () => {
     });
 
     expect(response).toMatchSnapshot();
+  });
+
+  test("working with createdAt option", async () => {
+    const date = new Date("2020-01-01T00:00:00.000Z");
+    vi.useFakeTimers();
+    vi.setSystemTime(date);
+    const response = await builder({ createdAt: true });
+    expect(response).toMatchSnapshot();
+    vi.useRealTimers();
   });
 });
