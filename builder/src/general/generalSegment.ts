@@ -13,7 +13,9 @@ export const generalSegment = async (): Promise<RootContent[]> => {
     ...generalItems.map(
       (item): ListItem => ({
         type: "listItem",
-        children: [{ type: "text", value: item }],
+        children: [
+          { type: "paragraph", children: [{ type: "text", value: item }] },
+        ],
       })
     ),
   ];

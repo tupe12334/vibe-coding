@@ -25,6 +25,14 @@ describe("builder", () => {
 
     expect(response).toMatchSnapshot();
   });
+  test("working with language and lint system", async () => {
+    const response = await builder({
+      language: "javascript",
+      lintSystem: "eslint",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
   test("working with project type only", async () => {
     const response = await builder({ projectType: "frontend" });
 
@@ -96,6 +104,7 @@ describe("builder", () => {
     const response = await builder({
       language: "typescript",
       packageManager: "npm",
+      lintSystem: "prettier",
       projectType: "frontend",
       framework: "react",
     });

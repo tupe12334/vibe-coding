@@ -28,4 +28,12 @@ describe("BuilderOptions", () => {
       language: "javascript",
     });
   });
+  it("should accept lintSystem only when language is defined", () => {
+    // @ts-expect-error wrong types
+    assertType<BuilderOptions>({ lintSystem: "eslint" });
+    assertType<BuilderOptions>({
+      language: "javascript",
+      lintSystem: "eslint",
+    });
+  });
 });

@@ -1,0 +1,4 @@
+[
+  "Use Prettier to maintain consistent code formatting.",
+  "Run Prettier as part of the lint process."
+]

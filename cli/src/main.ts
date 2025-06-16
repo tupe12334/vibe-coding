@@ -4,6 +4,7 @@ import { builder, BuilderOptions } from "@vibe-builder/builder";
 import { getLanguage } from "./getLanguage";
 import { getProjectType } from "./getProjectType";
 import { getFramework } from "./getFramework";
+import { getLintSystem } from "./getLintSystem";
 import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
 
@@ -15,6 +16,7 @@ export const main = async () => {
       ...builderOptions,
       language,
       packageManager: await getPackageManager(language),
+      lintSystem: await getLintSystem(language) ?? undefined,
     };
   }
   builderOptions.projectType = await getProjectType();
