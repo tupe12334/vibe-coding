@@ -36,4 +36,12 @@ describe("BuilderOptions", () => {
       lintSystem: "eslint",
     });
   });
+
+  it("should accept releaseSystem without restrictions", () => {
+    assertType<BuilderOptions>({ releaseSystem: "release-it" });
+    assertType<BuilderOptions>({
+      projectType: "lib",
+      releaseSystem: "semantic-release",
+    });
+  });
 });

@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`releaseSegment > returns release system guidelines 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Release system",
+      },
+      {
+        "type": "text",
+        "value": " (release-it)",
+      },
+    ],
+    "depth": 2,
+    "type": "heading",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Use release-it for interactive version management and publishing.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+    ],
+    "ordered": false,
+    "type": "list",
+  },
+]
+`;

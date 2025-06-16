@@ -100,6 +100,21 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with release system only", async () => {
+    const response = await builder({ releaseSystem: "release-it" });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with project type and release system", async () => {
+    const response = await builder({
+      projectType: "lib",
+      releaseSystem: "semantic-release",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with all options including framework", async () => {
     const response = await builder({
       language: "typescript",
