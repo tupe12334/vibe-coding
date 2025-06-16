@@ -1,0 +1,191 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`projectSegment > ui-lib includes lib rules 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Project type",
+      },
+      {
+        "type": "text",
+        "value": " (ui-lib)",
+      },
+    ],
+    "depth": 2,
+    "type": "heading",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Prefer working with flex",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Prioritize the use of components that exist in the library already.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Folder structure:
+
+- \`src/\`: Contains the source code for the components.
+- \`src/<component>/\`: Contains the individual components.
+  - Each component has its own folder with the following structure:
+    - \`index.ts\`: Exports all the relevant data.
+    - \`<ComponentName>.tsx\`: Contains the main component code.
+    - \`styles.ts\`: Contains styles for the component.
+    - \`types.ts\`: Contains TypeScript types for the component.
+    - \`<ComponentName>.test.tsx\`: Contains tests for the component.
+    - \`<ComponentName>.stories.tsx\`: Contains Storybook stories for the component.
+- \`src/index.ts\`: Exports all components for easy import.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Work with version control for publish the package if its publishable",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Create a clear and comprehensive README.md with installation instructions, usage examples, and API documentation",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Use semantic versioning (semver) for package versions",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Include proper TypeScript declaration files (.d.ts) for better developer experience",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Set up automated testing with good test coverage before publishing",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Configure proper entry points in package.json (main, module, types fields)",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Consider tree-shaking compatibility by using ES modules",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Add proper keywords and description in package.json for discoverability",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+    ],
+    "ordered": false,
+    "type": "list",
+  },
+]
+`;
