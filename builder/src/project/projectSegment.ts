@@ -12,7 +12,6 @@ const projectRulesMap: Record<string, string[]> = {
 };
 
 export const projectSegment = async (
-  templatesPath: string,
   projectType: string
 ): Promise<RootContent[]> => {
   const projectItems = projectRulesMap[projectType] || [];

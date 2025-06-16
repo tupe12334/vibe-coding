@@ -1,17 +1,14 @@
-import { readFile } from "fs/promises";
-import { join } from "path";
 import type { ListItem, RootContent } from "mdast";
+import { eslintRules } from "./eslint";
+
+const lintRulesMap: Record<string, readonly string[]> = {
+  eslint: eslintRules,
+};
 
 export const lintSegment = async (
-  templatesPath: string,
   lintSystem: string
 ): Promise<RootContent[]> => {
-  const lintJsonFile = (
-    await readFile(join(templatesPath, "lint", `${lintSystem}.json`), {
-      encoding: "utf-8",
-    })
-  ).toString();
-  const lintItems = JSON.parse(lintJsonFile);
+  const lintItems = lintRulesMap[lintSystem] ?? [];
 
   const segment: RootContent[] = [
     {
