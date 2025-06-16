@@ -1,18 +1,17 @@
-import { readFile } from "fs/promises";
-import { join } from "path";
 import { Languages } from "./options";
 import { ListItem, RootContent } from "mdast";
+import { javascriptRules, typescriptRules } from "../templates/language";
 
 export const languageSegment = async (
-  templatesPath: string,
+  _templatesPath: string,
   language: string
 ): Promise<RootContent[]> => {
-  const languageJsonFile = (
-    await readFile(join(templatesPath, "language", `${language}.json`), {
-      encoding: "utf-8",
-    })
-  ).toString();
-  const languageItems = JSON.parse(languageJsonFile);
+  const languageRulesMap: Record<string, readonly string[]> = {
+    javascript: javascriptRules,
+    typescript: typescriptRules,
+  };
+
+  const languageItems = languageRulesMap[language] || [];
 
   // Find the language configuration to check for subsets
   const languageConfig = Languages.find((lang) => lang.name === language);
@@ -23,19 +22,10 @@ export const languageSegment = async (
   // If language has subsets, load and append their content
   if (languageConfig?.subset) {
     for (const subsetLanguage of languageConfig.subset) {
-      try {
-        const subsetJsonFile = (
-          await readFile(
-            join(templatesPath, "language", `${subsetLanguage}.json`),
-            {
-              encoding: "utf-8",
-            }
-          )
-        ).toString();
-        const subsetItems = JSON.parse(subsetJsonFile);
+      const subsetItems = languageRulesMap[subsetLanguage];
+      if (subsetItems) {
         allItems = allItems.concat(subsetItems);
-      } catch (error) {
-        // If subset template doesn't exist, skip it
+      } else {
         console.warn(
           `Warning: Could not load subset template for ${subsetLanguage}`
         );
