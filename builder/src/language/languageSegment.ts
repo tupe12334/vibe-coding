@@ -21,7 +21,7 @@ export const languageSegment = async (
   let allItems = [...languageItems];
 
   // If language has subsets, load and append their content
-  if (languageConfig?.subset) {
+  if (languageConfig && "subset" in languageConfig) {
     for (const subsetLanguage of languageConfig.subset) {
       try {
         const subsetJsonFile = (

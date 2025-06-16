@@ -1,6 +1,8 @@
+import type { LanguageName } from "../language";
+
 export interface LintSystemOption {
   name: string;
-  availableFor: string[];
+  availableFor: LanguageName[];
 }
 
 export const LintSystems: LintSystemOption[] = [
@@ -8,7 +10,7 @@ export const LintSystems: LintSystemOption[] = [
 ];
 
 export const getAvailableLintSystems = (language: string): string[] => {
-  return LintSystems.filter((lint) => lint.availableFor.includes(language)).map(
-    (lint) => lint.name
-  );
+  return LintSystems.filter((lint) =>
+    lint.availableFor.includes(language as LanguageName)
+  ).map((lint) => lint.name);
 };
