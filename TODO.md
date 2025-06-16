@@ -16,3 +16,5 @@
 - [ ] Add option to skip any step of the cli.
 
 - [ ] Make the publish step for the builder to run in dry run, wait for a dev ik and only then publish the package.
+
+- [ ] Implement turbo repo to the project.
