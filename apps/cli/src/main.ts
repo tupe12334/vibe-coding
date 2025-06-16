@@ -9,6 +9,7 @@ import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
 import { getReleaseSystem } from "./getReleaseSystem";
 import { getMonorepoSystem } from "./getMonorepoSystem";
+import { getCreatedAt } from "./getCreatedAt";
 
 export const main = async () => {
   let builderOptions: BuilderOptions = {};
@@ -45,6 +46,11 @@ export const main = async () => {
     if (framework) {
       builderOptions.framework = framework;
     }
+  }
+
+  const createdAt = await getCreatedAt();
+  if (createdAt !== null) {
+    builderOptions.createdAt = createdAt;
   }
 
   const mdFile = await builder(builderOptions);
