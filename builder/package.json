@@ -16,7 +16,6 @@
     "build": "tsc",
     "prebuild": "rimraf dist",
     "build:w": "tsc --watch",
-    "start:cli": "node dist/cli/main.js",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "test:ui": "vitest --ui",
