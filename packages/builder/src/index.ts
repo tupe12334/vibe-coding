@@ -12,4 +12,5 @@ export {
   getAvailableMonorepoSystems,
   monorepoSegment,
 } from "./monorepo";
+export { CICDSystems, getAvailableCICDSystems, cicdSegment } from "./cicd";
 export { createdAtSegment } from "./createdAt";

@@ -11,7 +11,7 @@ describe("BuilderOptions", () => {
     assertType<BuilderOptions>({ language: "typescript" });
     assertType<BuilderOptions>({ language: "java" });
   });
-  
+
   it("should accept packageManager only when language is defined", () => {
     // @ts-expect-error wrong types
     assertType<BuilderOptions>({
@@ -53,6 +53,13 @@ describe("BuilderOptions", () => {
     });
   });
 
+  it("should accept cicdSystem without restrictions", () => {
+    assertType<BuilderOptions>({ cicdSystem: "github-actions" });
+    assertType<BuilderOptions>({
+      projectType: "lib",
+      cicdSystem: "gitlab-ci",
+    });
+  });
   it("should accept createdAt option", () => {
     assertType<BuilderOptions>({ createdAt: true });
   });

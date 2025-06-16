@@ -130,6 +130,21 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with cicd system only", async () => {
+    const response = await builder({ cicdSystem: "github-actions" });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with project type and cicd system", async () => {
+    const response = await builder({
+      projectType: "lib",
+      cicdSystem: "gitlab-ci",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with all options including framework", async () => {
     const response = await builder({
       language: "typescript",
