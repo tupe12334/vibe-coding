@@ -10,4 +10,3 @@
 
 5. [x] Add option to skip release system.
 
-6. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
