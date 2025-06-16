@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  lint-build-publish:
+  lint:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -31,6 +31,27 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm run lint
+
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: builder
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.1
+      - name: Install dependencies
+        run: pnpm install
       - name: Build
         run: pnpm run build
       - name: Check version change
@@ -43,8 +64,55 @@ jobs:
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
+    outputs:
+      changed: ${{ steps.version.outputs.changed }}
+
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: builder
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Test
+        run: pnpm run test
+
+  publish:
+    needs: [lint, build, test]
+    if: github.event_name == 'push' && needs.build.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: builder
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.1
+      - name: Install dependencies
+        run: pnpm install
       - name: Publish
-        if: github.event_name == 'push' && steps.version.outputs.changed == 'true'
         run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
