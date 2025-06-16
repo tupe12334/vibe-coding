@@ -20,7 +20,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
   };
   const templatesPath = join(__dirname, "../templates");
 
-  tree.children = tree.children.concat(await generalSegment(templatesPath));
+  tree.children = tree.children.concat(await generalSegment());
   if (options === undefined) {
     return toMarkdown(tree);
   }

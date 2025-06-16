@@ -1,0 +1,79 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generalSegment > returns general guidelines 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "General Guidelines",
+      },
+    ],
+    "depth": 2,
+    "type": "heading",
+  },
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Don't work on any of the tasks in the TODO.md file unless you are asked to.",
+      },
+    ],
+    "type": "listItem",
+  },
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Always try to early return from functions.",
+      },
+    ],
+    "type": "listItem",
+  },
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Use \`const\` for variables that are not reassigned.",
+      },
+    ],
+    "type": "listItem",
+  },
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Make sure to focus on why and not how in documentation.",
+      },
+    ],
+    "type": "listItem",
+  },
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Write predictable functions and make a spec file for them according to the testing library in use.",
+      },
+    ],
+    "type": "listItem",
+  },
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Don't use \`any\` in TypeScript, use \`unknown\` instead.",
+      },
+    ],
+    "type": "listItem",
+  },
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Don't cast types without validation.",
+      },
+    ],
+    "type": "listItem",
+  },
+]
+`;
