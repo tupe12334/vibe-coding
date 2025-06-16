@@ -1,0 +1,104 @@
+name: CLI CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/cli
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint
+
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/cli
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm run build
+
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/cli
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Test
+        run: pnpm run test
+
+  publish:
+    needs: [lint, build, test]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Publish
+        run: pnpm --filter @vibe-builder/cli run release -- --ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
