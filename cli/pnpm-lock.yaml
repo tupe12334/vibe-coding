@@ -12,8 +12,8 @@ importers:
         specifier: ^7.5.3
         version: 7.5.3(@types/node@24.0.1)
       '@vibe-builder/builder':
-        specifier: 0.1.1-1
-        version: 0.1.1-1
+        specifier: file:../builder
+        version: file:../builder
     devDependencies:
       '@types/node':
         specifier: ^24.0.1
@@ -166,8 +166,8 @@ packages:
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
 
-  '@vibe-builder/builder@0.1.1-1':
-    resolution: {integrity: sha512-6ESIx+OlNemQwTNyflYr/Lfbgh66c+0IL8Wbjuk3HuYSws5oSPXBfbdywMl2LbfU3+U/knHknleGTIkQRDP/aw==}
+  '@vibe-builder/builder@file:../builder':
+    resolution: {directory: ../builder, type: directory}
 
   ansi-escapes@4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
@@ -534,7 +534,7 @@ snapshots:
 
   '@types/unist@3.0.3': {}
 
-  '@vibe-builder/builder@0.1.1-1':
+  '@vibe-builder/builder@file:../builder':
     dependencies:
       mdast-util-to-markdown: 2.1.2
 

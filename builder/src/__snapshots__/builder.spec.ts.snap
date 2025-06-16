@@ -33,6 +33,12 @@ Package Manager: npm
 
 * Use template literals for string interpolation.
 
+## Lint system (eslint)
+
+* Use ESLint to enforce code quality and style guidelines.
+
+* Fix lint issues before committing code.
+
 ## Project type (frontend)
 
 * Prefer working with flex layouts for responsive design.
@@ -94,6 +100,43 @@ exports[`builder > working with framework only - react 1`] = `
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
+"
+`;
+
+exports[`builder > working with language and lint system 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \\\`const\\\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
+
+* Don't cast types without validation.
+
+## Programming language (javascript)
+
+* Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
+
+* Use \\\`===\\\` over \\\`==\\\` for strict equality checks.
+
+* Use arrow functions for anonymous functions.
+
+* Use template literals for string interpolation.
+
+## Lint system (eslint)
+
+* Use ESLint to enforce code quality and style guidelines.
+
+* Fix lint issues before committing code.
 "
 `;
 
