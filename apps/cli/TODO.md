@@ -9,3 +9,5 @@
 4. [ ] Add option to select monorepo management system.
 
 5. [ ] Add publish step to the CI, the same as the builder.
+
+6. [ ] Add option to skip release system.
