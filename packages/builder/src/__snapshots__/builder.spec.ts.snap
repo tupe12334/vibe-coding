@@ -133,6 +133,41 @@ Created at: 2020-01-01T00:00:00.000Z
 "
 `;
 
+exports[`builder > working with framework only - cypress 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \\\`const\\\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
+
+* Don't cast types without validation.
+
+* Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extensions in imports, use absolute imports instead.
+
+## Framework (cypress)
+
+* Use Cypress commands to keep tests concise and readable.
+"
+`;
+
 exports[`builder > working with framework only - nestjs 1`] = `
 "# AI agent instructions
 
@@ -165,6 +200,41 @@ exports[`builder > working with framework only - nestjs 1`] = `
 ## Framework (nestjs)
 
 * Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities.
+"
+`;
+
+exports[`builder > working with framework only - playwright 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \\\`const\\\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
+
+* Don't cast types without validation.
+
+* Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extensions in imports, use absolute imports instead.
+
+## Framework (playwright)
+
+* Prefer using fixtures to share setup across Playwright tests.
 "
 `;
 
@@ -588,6 +658,47 @@ exports[`builder > working with project type and framework - backend with nestjs
 "
 `;
 
+exports[`builder > working with project type and framework - e2e with playwright 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \\\`const\\\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
+
+* Don't cast types without validation.
+
+* Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extensions in imports, use absolute imports instead.
+
+## Project type (e2e)
+
+* Structure tests using the Page Object Model (POM) for maintainability.
+
+* Use screenshot testing when possible to detect visual regressions.
+
+## Framework (playwright)
+
+* Prefer using fixtures to share setup across Playwright tests.
+"
+`;
+
 exports[`builder > working with project type and framework - frontend with react 1`] = `
 "# AI agent instructions
 
@@ -732,6 +843,43 @@ exports[`builder > working with project type and release system 1`] = `
 ## Release system (semantic-release)
 
 * Use semantic-release for automated versioning and changelog generation.
+"
+`;
+
+exports[`builder > working with project type e2e 1`] = `
+"# AI agent instructions
+
+## General Guidelines
+
+* Don't work on any of the tasks in the TODO.md file unless you are asked to.
+
+* Always try to early return from functions.
+
+* Use \\\`const\\\` for variables that are not reassigned.
+
+* Make sure to focus on why and not how in documentation.
+
+* Write predictable functions and make a spec file for them according to the testing library in use.
+
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
+
+* Don't cast types without validation.
+
+* Whenever finish a task from the TODO.md file mark it as finished, if there is some that already marked as finish delete them
+
+* Work in a domain driven design (DDD) way, i.e. every function its is own module, and its its folder there is the code with JSDocs, spec file and types in there files.
+
+* Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
+
+* After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extensions in imports, use absolute imports instead.
+
+## Project type (e2e)
+
+* Structure tests using the Page Object Model (POM) for maintainability.
+
+* Use screenshot testing when possible to detect visual regressions.
 "
 `;
 

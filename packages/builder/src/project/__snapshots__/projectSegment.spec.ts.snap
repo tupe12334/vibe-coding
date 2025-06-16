@@ -1,5 +1,58 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`projectSegment > e2e project returns e2e rules 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Project type",
+      },
+      {
+        "type": "text",
+        "value": " (e2e)",
+      },
+    ],
+    "depth": 2,
+    "type": "heading",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Structure tests using the Page Object Model (POM) for maintainability.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Use screenshot testing when possible to detect visual regressions.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+    ],
+    "ordered": false,
+    "type": "list",
+  },
+]
+`;
+
 exports[`projectSegment > ui-lib includes lib rules 1`] = `
 [
   {

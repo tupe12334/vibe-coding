@@ -51,6 +51,12 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with project type e2e", async () => {
+    const response = await builder({ projectType: "e2e" });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with project type lib and language typescript", async () => {
     const response = await builder({
       projectType: "lib",
@@ -72,6 +78,18 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with framework only - playwright", async () => {
+    const response = await builder({ framework: "playwright" });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with framework only - cypress", async () => {
+    const response = await builder({ framework: "cypress" });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with project type and framework - backend with nestjs", async () => {
     const response = await builder({
       projectType: "backend",
@@ -85,6 +103,15 @@ describe("builder", () => {
     const response = await builder({
       projectType: "frontend",
       framework: "react",
+    });
+
+    expect(response).toMatchSnapshot();
+  });
+
+  test("working with project type and framework - e2e with playwright", async () => {
+    const response = await builder({
+      projectType: "e2e",
+      framework: "playwright",
     });
 
     expect(response).toMatchSnapshot();

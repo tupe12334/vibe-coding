@@ -12,6 +12,14 @@ export const Frameworks: FrameworkOption[] = [
     name: "react",
     availableFor: ["frontend", "ui-lib"],
   },
+  {
+    name: "playwright",
+    availableFor: ["e2e"],
+  },
+  {
+    name: "cypress",
+    availableFor: ["e2e"],
+  },
 ];
 
 export const getAvailableFrameworks = (projectType: string): string[] => {

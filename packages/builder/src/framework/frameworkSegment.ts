@@ -1,10 +1,14 @@
 import type { RootContent } from "mdast";
 import { nestjsRules } from "./nestjs";
 import { reactRules } from "./react";
+import { playwrightRules } from "./playwright";
+import { cypressRules } from "./cypress";
 
 const frameworkRulesMap: Record<string, readonly string[]> = {
   nestjs: nestjsRules,
   react: reactRules,
+  playwright: playwrightRules,
+  cypress: cypressRules,
 };
 
 export const frameworkSegment = async (
