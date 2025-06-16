@@ -4,3 +4,4 @@ export * from "./backend";
 export * from "./frontend";
 export * from "./lib";
 export * from "./ui-lib";
+export * from "./e2e";

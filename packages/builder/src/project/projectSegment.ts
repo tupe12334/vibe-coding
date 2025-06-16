@@ -3,6 +3,7 @@ import { backendRules } from "./backend";
 import { frontendRules } from "./frontend";
 import { libRules } from "./lib";
 import { uiLibRules } from "./ui-lib";
+import { e2eRules } from "./e2e";
 import { ProjectTypes } from "./options";
 
 const projectRulesMap: Record<string, readonly string[]> = {
@@ -10,6 +11,7 @@ const projectRulesMap: Record<string, readonly string[]> = {
   frontend: frontendRules,
   lib: libRules,
   "ui-lib": uiLibRules,
+  e2e: e2eRules,
 };
 
 export const projectSegment = async (
