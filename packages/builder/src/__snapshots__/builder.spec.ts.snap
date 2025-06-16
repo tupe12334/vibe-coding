@@ -27,6 +27,8 @@ exports[`builder > working with all options including framework 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -88,6 +90,8 @@ exports[`builder > working with cicd system only 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 CI/CD system: github-actions
 "
 `;
@@ -119,6 +123,8 @@ exports[`builder > working with createdAt option 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 Created at: 2020-01-01T00:00:00.000Z
 "
 `;
@@ -149,6 +155,8 @@ exports[`builder > working with framework only - nestjs 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Framework (nestjs)
 
@@ -183,6 +191,8 @@ exports[`builder > working with framework only - react 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
@@ -215,6 +225,8 @@ exports[`builder > working with language and lint system 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Programming language (javascript)
 
@@ -261,6 +273,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -304,6 +318,8 @@ exports[`builder > working with language only 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 ## Programming language (javascript)
 
 * Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
@@ -342,6 +358,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Programming language (typescript)
 
@@ -383,6 +401,8 @@ exports[`builder > working with language, project type and framework 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Programming language (typescript)
 
@@ -433,6 +453,8 @@ exports[`builder > working with monorepo system only 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 Monorepo system: turbo
 "
 `;
@@ -463,6 +485,8 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 "
 `;
 
@@ -492,6 +516,8 @@ exports[`builder > working with project type and cicd system 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 CI/CD system: gitlab-ci
 
@@ -542,6 +568,8 @@ exports[`builder > working with project type and framework - backend with nestjs
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 ## Project type (backend)
 
 * Always validate endpoint request data.
@@ -578,6 +606,8 @@ exports[`builder > working with project type and framework - frontend with react
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Project type (frontend)
 
@@ -619,6 +649,8 @@ exports[`builder > working with project type and monorepo system 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 Monorepo system: nx
 
@@ -668,6 +700,8 @@ exports[`builder > working with project type and release system 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Project type (lib)
 
@@ -720,6 +754,8 @@ exports[`builder > working with project type lib 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 ## Project type (lib)
 
 * Work with version control for publish the package if its publishable
@@ -766,6 +802,8 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Programming language (typescript)
 
@@ -826,6 +864,8 @@ exports[`builder > working with project type only 1`] = `
 
 * After finishing the task make sure to run format, lint, test and build commands.
 
+* Don't use file extenstions in imports, use absolute imports instead.
+
 ## Project type (frontend)
 
 * Prefer working with flex layouts for responsive design.
@@ -862,6 +902,8 @@ exports[`builder > working with project type ui-lib 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Project type (ui-lib)
 
@@ -926,6 +968,8 @@ exports[`builder > working with release system only 1`] = `
 * Put unit tests in the same folder as the code they test, and name them with \\\`.spec.ts\\\` suffix.
 
 * After finishing the task make sure to run format, lint, test and build commands.
+
+* Don't use file extenstions in imports, use absolute imports instead.
 
 ## Release system (release-it)
 
