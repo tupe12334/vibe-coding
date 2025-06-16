@@ -1,6 +1,7 @@
 type BaseBuilderOptions = {
   projectType?: string;
   framework?: string;
+  releaseSystem?: string;
 };
 type BuilderOptionsWithLanguage = {
   language: string;
