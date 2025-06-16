@@ -104,7 +104,7 @@ describe("builder", () => {
     const response = await builder({
       language: "typescript",
       packageManager: "npm",
-      lintSystem: "prettier",
+      lintSystem: "eslint",
       projectType: "frontend",
       framework: "react",
     });

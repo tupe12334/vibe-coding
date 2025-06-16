@@ -5,7 +5,6 @@ export interface LintSystemOption {
 
 export const LintSystems: LintSystemOption[] = [
   { name: "eslint", availableFor: ["javascript", "typescript"] },
-  { name: "prettier", availableFor: ["javascript", "typescript"] },
 ];
 
 export const getAvailableLintSystems = (language: string): string[] => {

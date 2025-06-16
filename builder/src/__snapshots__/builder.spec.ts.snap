@@ -33,11 +33,11 @@ Package Manager: npm
 
 * Use template literals for string interpolation.
 
-## Lint system (prettier)
+## Lint system (eslint)
 
-* Use Prettier to maintain consistent code formatting.
+* Use ESLint to enforce code quality and style guidelines.
 
-* Run Prettier as part of the lint process.
+* Fix lint issues before committing code.
 
 ## Project type (frontend)
 
