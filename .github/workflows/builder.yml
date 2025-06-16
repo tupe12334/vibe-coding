@@ -82,6 +82,9 @@ jobs:
     needs: [lint, build, test]
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/builder
     steps:
       - uses: actions/checkout@v4
         with:
@@ -97,6 +100,8 @@ jobs:
           version: 10.12.1
       - name: Install dependencies
         run: pnpm install
+      - name: Build
+        run: pnpm run build
       - name: Publish
         run: pnpm --filter @vibe-builder/builder run release -- --ci
         env:
