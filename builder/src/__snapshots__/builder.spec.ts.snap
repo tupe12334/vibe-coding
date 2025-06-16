@@ -9,13 +9,13 @@ exports[`builder > working with all options including framework 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -56,13 +56,13 @@ exports[`builder > working with framework only - nestjs 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -81,13 +81,13 @@ exports[`builder > working with framework only - react 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -106,13 +106,13 @@ exports[`builder > working with language and package manager 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -141,13 +141,13 @@ exports[`builder > working with language only 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -172,13 +172,13 @@ exports[`builder > working with language only with a language that is superset 1
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -205,13 +205,13 @@ exports[`builder > working with language, project type and framework 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -246,13 +246,13 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 "
@@ -267,13 +267,13 @@ exports[`builder > working with project type and framework - backend with nestjs
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -296,13 +296,13 @@ exports[`builder > working with project type and framework - frontend with react
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -329,13 +329,13 @@ exports[`builder > working with project type lib 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -368,13 +368,13 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -419,13 +419,13 @@ exports[`builder > working with project type only 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
@@ -448,13 +448,13 @@ exports[`builder > working with project type ui-lib 1`] = `
 
 * Always try to early return from functions.
 
-* Use \`const\` for variables that are not reassigned.
+* Use \\\`const\\\` for variables that are not reassigned.
 
 * Make sure to focus on why and not how in documentation.
 
 * Write predictable functions and make a spec file for them according to the testing library in use.
 
-* Don't use \`any\` in TypeScript, use \`unknown\` instead.
+* Don't use \\\`any\\\` in TypeScript, use \\\`unknown\\\` instead.
 
 * Don't cast types without validation.
 
