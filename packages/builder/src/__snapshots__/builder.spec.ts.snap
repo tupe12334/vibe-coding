@@ -92,7 +92,11 @@ exports[`builder > working with cicd system only 1`] = `
 
 * Don't use file extensions in imports, use absolute imports instead.
 
-CI/CD system: github-actions
+## CI/CD system (github-actions)
+
+* CI process should run lint, test and steps preferably in parallel if posable.
+
+* CD process should use the defined release system.
 "
 `;
 
@@ -519,7 +523,11 @@ exports[`builder > working with project type and cicd system 1`] = `
 
 * Don't use file extensions in imports, use absolute imports instead.
 
-CI/CD system: gitlab-ci
+## CI/CD system (gitlab-ci)
+
+* CI process should run lint, test and steps preferably in parallel if posable.
+
+* CD process should use the defined release system.
 
 ## Project type (lib)
 
