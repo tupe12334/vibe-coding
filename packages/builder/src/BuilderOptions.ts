@@ -1,6 +1,7 @@
 type BaseBuilderOptions = {
   projectType?: string;
   framework?: string;
+  testFramework?: string;
   releaseSystem?: string;
   monorepoSystem?: string;
   cicdSystem?: string;

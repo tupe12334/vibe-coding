@@ -4,6 +4,7 @@ import { generalSegment } from "./general/generalSegment";
 import { languageSegment } from "./language/languageSegment";
 import { projectSegment } from "./project/projectSegment";
 import { frameworkSegment } from "./framework/frameworkSegment";
+import { testingSegment } from "./testing/testingSegment";
 import { lintSegment } from "./lint/lintSegment";
 import { releaseSegment } from "./release/releaseSegment";
 import { monorepoSegment } from "./monorepo/monorepoSegment";
@@ -31,6 +32,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     packageManager,
     projectType,
     framework,
+    testFramework,
     lintSystem,
     releaseSystem,
     monorepoSystem,
@@ -70,6 +72,10 @@ export async function builder(options?: BuilderOptions): Promise<string> {
 
   if (framework) {
     tree.children = tree.children.concat(await frameworkSegment(framework));
+  }
+
+  if (testFramework) {
+    tree.children = tree.children.concat(await testingSegment(testFramework));
   }
 
   if (releaseSystem) {

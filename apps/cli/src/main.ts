@@ -4,6 +4,7 @@ import { builder, BuilderOptions } from "@vibe-builder/builder";
 import { getLanguage } from "./getLanguage";
 import { getProjectType } from "./getProjectType";
 import { getFramework } from "./getFramework";
+import { getTestFramework } from "./getTestFramework";
 import { getLintSystem } from "./getLintSystem";
 import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
@@ -46,6 +47,11 @@ export const main = async () => {
     if (framework) {
       builderOptions.framework = framework;
     }
+  }
+
+  const testFramework = await getTestFramework();
+  if (testFramework) {
+    builderOptions.testFramework = testFramework;
   }
 
   const createdAt = await getCreatedAt();
