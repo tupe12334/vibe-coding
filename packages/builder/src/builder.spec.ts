@@ -163,6 +163,12 @@ describe("builder", () => {
     expect(response).toMatchSnapshot();
   });
 
+  test("working with test framework only", async () => {
+    const response = await builder({ testFramework: "jest" });
+
+    expect(response).toMatchSnapshot();
+  });
+
   test("working with project type and cicd system", async () => {
     const response = await builder({
       projectType: "lib",

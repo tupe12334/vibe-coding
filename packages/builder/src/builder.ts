@@ -10,6 +10,7 @@ import { monorepoSegment } from "./monorepo/monorepoSegment";
 import { cicdSegment } from "./cicd/cicdSegment";
 import { BuilderOptions } from "./BuilderOptions";
 import { createdAtSegment } from "./createdAt/createdAtSegment";
+import { testingSegment } from "./testing/testingSegment";
 
 export async function builder(options?: BuilderOptions): Promise<string> {
   const tree: Root = {
@@ -32,6 +33,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     projectType,
     framework,
     lintSystem,
+    testFramework,
     releaseSystem,
     monorepoSystem,
     cicdSystem,
@@ -62,6 +64,10 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     if (lintSystem) {
       tree.children = tree.children.concat(await lintSegment(lintSystem));
     }
+  }
+
+  if (testFramework) {
+    tree.children = tree.children.concat(await testingSegment(testFramework));
   }
 
   if (projectType) {
