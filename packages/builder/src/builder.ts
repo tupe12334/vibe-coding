@@ -73,6 +73,8 @@ export async function builder(options?: BuilderOptions): Promise<string> {
 
   if (projectType) {
     tree.children = tree.children.concat(await projectSegment(projectType));
+
+    // Extract to function and add spec `toIncludeUIGuidelines`
     if (projectType === "frontend" || projectType === "ui-lib") {
       tree.children = tree.children.concat(await uiSegment());
     }
