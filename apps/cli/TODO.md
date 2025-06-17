@@ -10,4 +10,4 @@
 
 5. [ ] Make pnpm the default package manager for the cli and lowercase all the options of the package managers.
 6. [ ] Add the e2e project to be an option in the cli.
-7. [ ] Remove the **test** folder and put the tests where they belong.
+7. [x] Remove the **test** folder and put the tests where they belong.
