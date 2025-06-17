@@ -1,5 +1,9 @@
 import { select } from "@inquirer/prompts";
 import { getAvailableFrameworks } from "@vibe-builder/builder";
+/**
+ * Prompt the user to choose a framework for the given project type.
+ * Returns `null` when no frameworks are available.
+ */
 
 export const getFramework = async (projectType: string) => {
   const availableFrameworks = getAvailableFrameworks(projectType);
