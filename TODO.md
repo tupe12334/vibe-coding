@@ -6,4 +6,3 @@
 4. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
 5. [ ] Make sure the e2e frameworks can be selected only with an e2e testing project type.
 6. [ ] Add segment to select testing framework, i.e. jest, vitest, mocha.
-7. [x] Remove the none option if there is a skip option for a cli step
