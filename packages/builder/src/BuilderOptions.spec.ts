@@ -60,6 +60,13 @@ describe("BuilderOptions", () => {
       cicdSystem: "gitlab-ci",
     });
   });
+  it("should accept testFramework without restrictions", () => {
+    assertType<BuilderOptions>({ testFramework: "jest" });
+    assertType<BuilderOptions>({
+      projectType: "lib",
+      testFramework: "vitest",
+    });
+  });
   it("should accept createdAt option", () => {
     assertType<BuilderOptions>({ createdAt: true });
   });
