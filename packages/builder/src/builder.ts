@@ -64,9 +64,10 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     if (lintSystem) {
       tree.children = tree.children.concat(await lintSegment(lintSystem));
     }
-    if (testFramework) {
-      tree.children = tree.children.concat(await testingSegment(testFramework));
-    }
+  }
+
+  if (testFramework) {
+    tree.children = tree.children.concat(await testingSegment(testFramework));
   }
 
   if (projectType) {

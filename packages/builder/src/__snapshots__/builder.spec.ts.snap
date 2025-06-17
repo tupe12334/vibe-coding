@@ -1161,5 +1161,9 @@ exports[`builder > working with test framework only 1`] = `
 * After finishing the task make sure to run format, lint, test and build commands.
 
 * Don't use file extensions in imports, use absolute imports instead.
+
+## Testing framework (jest)
+
+* Use Jest for unit testing and mocking dependencies.
 "
 `;
