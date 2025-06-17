@@ -1,4 +1,7 @@
 {
   "version": "0.2",
-  "words": ["mdast"]
+  "words": [
+    "cicd",
+    "mdast"
+  ]
 }
