@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testingSegment > returns testing framework guidelines 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Testing framework",
+      },
+      {
+        "type": "text",
+        "value": " (jest)",
+      },
+    ],
+    "depth": 2,
+    "type": "heading",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Use Jest for unit testing and mocking dependencies.",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "listItem",
+      },
+    ],
+    "ordered": false,
+    "type": "list",
+  },
+]
+`;

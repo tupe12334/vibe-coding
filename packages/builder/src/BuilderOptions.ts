@@ -5,6 +5,7 @@ type BaseBuilderOptions = {
   monorepoSystem?: string;
   cicdSystem?: string;
   createdAt?: boolean;
+  testFramework?: string;
 };
 type BuilderOptionsWithLanguage = {
   language: string;

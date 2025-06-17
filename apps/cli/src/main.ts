@@ -5,6 +5,7 @@ import { getLanguage } from "./getLanguage";
 import { getProjectType } from "./getProjectType";
 import { getFramework } from "./getFramework";
 import { getLintSystem } from "./getLintSystem";
+import { getTestingFramework } from "./getTestingFramework";
 import { outputPath } from "./outputPath";
 import { getPackageManager } from "./getPackageManager/getPackageManager";
 import { getReleaseSystem } from "./getReleaseSystem";
@@ -20,6 +21,7 @@ export const main = async () => {
       language,
       packageManager: (await getPackageManager(language)) ?? undefined,
       lintSystem: (await getLintSystem(language)) ?? undefined,
+      testFramework: (await getTestingFramework()) ?? undefined,
     };
   }
 
