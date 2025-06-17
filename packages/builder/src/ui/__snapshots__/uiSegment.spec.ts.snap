@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`uiSegment > returns general ui guidelines 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "General UI Guidelines",
+      },
+    ],
+    "depth": 2,
+    "type": "heading",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "Write styling in a direction agnostic way: i.e. use start and end instead of left and right",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "listItem",
+  },
+]
+`;

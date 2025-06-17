@@ -19,3 +19,4 @@ export {
   getAvailableTestingFrameworks,
   testingSegment,
 } from "./testing";
+export { uiSegment } from "./ui/uiSegment";

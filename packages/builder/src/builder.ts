@@ -11,6 +11,7 @@ import { cicdSegment } from "./cicd/cicdSegment";
 import { BuilderOptions } from "./BuilderOptions";
 import { createdAtSegment } from "./createdAt/createdAtSegment";
 import { testingSegment } from "./testing/testingSegment";
+import { uiSegment } from "./ui/uiSegment";
 
 export async function builder(options?: BuilderOptions): Promise<string> {
   const tree: Root = {
@@ -72,6 +73,9 @@ export async function builder(options?: BuilderOptions): Promise<string> {
 
   if (projectType) {
     tree.children = tree.children.concat(await projectSegment(projectType));
+    if (projectType === "frontend" || projectType === "ui-lib") {
+      tree.children = tree.children.concat(await uiSegment());
+    }
   }
 
   if (framework) {
