@@ -11,6 +11,7 @@ export const generalRules = [
   "Put unit tests in the same folder as the code they test, and name them with `.spec.ts` suffix.",
   "After finishing the task make sure to run format, lint, test and build commands.",
   "Don't use file extensions in imports, use absolute imports instead.",
+  "Don't test mocks",
 ] as const;
 
 export type GeneralRule = (typeof generalRules)[number];
