@@ -11,3 +11,4 @@
 5. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
 
 6. [x] Add option to skip to all segments.
+7. [ ] Make pnpm the default package manager for the cli and lowercase all the options of the package managers.
