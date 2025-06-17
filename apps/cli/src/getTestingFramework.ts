@@ -1,8 +1,16 @@
 import { select } from "@inquirer/prompts";
-import { getAvailableTestingFrameworks } from "@vibe-builder/builder";
+import {
+  getAvailableFrameworks,
+  getAvailableTestingFrameworks,
+} from "@vibe-builder/builder";
 
-export const getTestingFramework = async () => {
-  const available = getAvailableTestingFrameworks();
+export const getTestingFramework = async (projectType: string) => {
+  const available =
+    projectType === "e2e"
+      ? getAvailableFrameworks("e2e")
+      : getAvailableTestingFrameworks().filter((framework) =>
+          ["jest", "vitest"].includes(framework)
+        );
 
   const choices = [
     { name: "None", value: null },
