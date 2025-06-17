@@ -13,7 +13,7 @@ describe("getTestingFramework", () => {
   it("prompts user with testing framework options for lib", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce("jest");
-    const { getTestingFramework } = await import("../getTestingFramework");
+    const { getTestingFramework } = await import("./getTestingFramework");
 
     const result = await getTestingFramework("lib");
 
@@ -33,7 +33,7 @@ describe("getTestingFramework", () => {
   it("prompts user with testing framework options for e2e", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce("cypress");
-    const { getTestingFramework } = await import("../getTestingFramework");
+    const { getTestingFramework } = await import("./getTestingFramework");
 
     const result = await getTestingFramework("e2e");
 
@@ -53,7 +53,7 @@ describe("getTestingFramework", () => {
   it("returns null when skip is chosen", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce(null);
-    const { getTestingFramework } = await import("../getTestingFramework");
+    const { getTestingFramework } = await import("./getTestingFramework");
 
     const result = await getTestingFramework("lib");
 
