@@ -7,3 +7,4 @@
 5. [x] Add a project type of e2e testing, it will have the frameworks: playwright and cypress, two rules for now to the e2e testing project will be using of Page object model (POM) and a rule that says to use screenshots testing when possible.
 6. [ ] Make sure the e2e frameworks can be selected only with an e2e testing project type.
 7. [ ] Add segment to select testing framework, i.e. jest, vitest, mocha.
+8. [ ] Remove the none option if there is a skip option for a cli step
