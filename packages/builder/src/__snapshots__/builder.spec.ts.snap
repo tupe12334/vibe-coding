@@ -57,6 +57,10 @@ Package Manager: npm
 
 * When writing a component, try to enter logic or network into it.
 
+## General UI Guidelines
+
+* Write styling in a direction agnostic way: i.e. use start and end instead of left and right
+
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
@@ -738,6 +742,10 @@ exports[`builder > working with project type and framework - frontend with react
 
 * When writing a component, try to enter logic or network into it.
 
+## General UI Guidelines
+
+* Write styling in a direction agnostic way: i.e. use start and end instead of left and right
+
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
@@ -1033,6 +1041,10 @@ exports[`builder > working with project type only 1`] = `
 * Use rems for font sizes and spacing to ensure scalability.
 
 * When writing a component, try to enter logic or network into it.
+
+## General UI Guidelines
+
+* Write styling in a direction agnostic way: i.e. use start and end instead of left and right
 "
 `;
 
@@ -1099,6 +1111,10 @@ exports[`builder > working with project type ui-lib 1`] = `
 * Consider tree-shaking compatibility by using ES modules
 
 * Add proper keywords and description in package.json for discoverability
+
+## General UI Guidelines
+
+* Write styling in a direction agnostic way: i.e. use start and end instead of left and right
 "
 `;
 
