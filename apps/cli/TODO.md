@@ -12,3 +12,4 @@
 
 6. [x] Add option to skip to all segments.
 7. [ ] Make pnpm the default package manager for the cli and lowercase all the options of the package managers.
+8. [ ] Add the e2e project to be an option in the cli.
