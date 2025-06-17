@@ -9,7 +9,6 @@ export const getFramework = async (projectType: string) => {
   }
 
   const choices = [
-    { name: "None", value: null },
     ...availableFrameworks.map((framework) => ({
       name: framework,
       value: framework,

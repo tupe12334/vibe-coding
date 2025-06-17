@@ -9,7 +9,6 @@ export const getMonorepoSystem = async () => {
   }
 
   const choices = [
-    { name: "None", value: null },
     ...availableSystems.map((system) => ({ name: system, value: system })),
     { name: "Skip", value: null },
   ];
