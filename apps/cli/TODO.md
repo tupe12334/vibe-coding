@@ -4,10 +4,10 @@
 
 2. [ ] Add to the CI running lint, test and build steps for the cli as like the builder
 
-3. [x] Add option to select monorepo management system.
+3. [ ] Add publish step to the CI, the same as the builder.
 
-4. [ ] Add publish step to the CI, the same as the builder.
+4. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
 
-5. [ ] Add option to add ui framework when choosing ui-lib and its depends on the project framework you choose, for example react will have tailwind and MUI.
-
-6. [x] Add option to skip to all segments.
+5. [ ] Make pnpm the default package manager for the cli and lowercase all the options of the package managers.
+6. [ ] Add the e2e project to be an option in the cli.
+7. [x] Remove the **test** folder and put the tests where they belong.

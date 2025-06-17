@@ -79,7 +79,6 @@
     "tests",
     "coverage",
     "docs",
-    "src/__tests__",
     "**/*.spec.ts"
   ]
 }
