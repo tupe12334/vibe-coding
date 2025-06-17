@@ -12,7 +12,8 @@
     "start:cli": "node dist/main.js",
     "lint": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "release": "release-it"
   },
   "bin": {
     "vibe-builder": "dist/main.js"
@@ -25,10 +26,27 @@
     "@types/node": "^24.0.1",
     "rimraf": "^6.0.1",
     "typescript": "~5.1.6",
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.3",
+    "release-it": "^19.0.3"
   },
   "dependencies": {
     "@inquirer/prompts": "^7.5.3",
     "@vibe-builder/builder": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}",
+      "commitMessage": "chore: release v${version}"
+    },
+    "npm": {
+      "publish": true,
+      "access": "public"
+    },
+    "github": {
+      "release": true
+    }
   }
 }
