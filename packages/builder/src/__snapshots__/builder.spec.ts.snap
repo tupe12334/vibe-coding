@@ -693,6 +693,8 @@ exports[`builder > working with project type and framework - e2e with playwright
 
 * Use screenshot testing when possible to detect visual regressions.
 
+* Use msw (Mock Service Worker) for API mocking in tests to ensure consistent and reliable test environments.
+
 ## Framework (playwright)
 
 * Prefer using fixtures to share setup across Playwright tests.
@@ -880,6 +882,8 @@ exports[`builder > working with project type e2e 1`] = `
 * Structure tests using the Page Object Model (POM) for maintainability.
 
 * Use screenshot testing when possible to detect visual regressions.
+
+* Use msw (Mock Service Worker) for API mocking in tests to ensure consistent and reliable test environments.
 "
 `;
 
