@@ -23,7 +23,6 @@ describe("getMonorepoSystem", () => {
       message: "Which monorepo system would you like to use?",
       default: null,
       choices: [
-        { name: "None", value: null },
         ...systems.map((system) => ({ name: system, value: system })),
         { name: "Skip", value: null },
       ],
