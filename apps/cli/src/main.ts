@@ -21,11 +21,17 @@ export const main = async () => {
       language,
       packageManager: (await getPackageManager(language)) ?? undefined,
       lintSystem: (await getLintSystem(language)) ?? undefined,
-      testFramework: (await getTestingFramework()) ?? undefined,
     };
   }
 
-  builderOptions.projectType = await getProjectType() ?? undefined;
+  builderOptions.projectType = (await getProjectType()) ?? undefined;
+
+  if (builderOptions.projectType) {
+    const testing = await getTestingFramework(builderOptions.projectType);
+    if (testing) {
+      builderOptions.testFramework = testing;
+    }
+  }
 
   if (
     builderOptions.projectType &&
