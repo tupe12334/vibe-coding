@@ -11,3 +11,5 @@
 5. [ ] Make pnpm the default package manager for the cli and lowercase all the options of the package managers.
 6. [ ] Add the e2e project to be an option in the cli.
 7. [x] Remove the **test** folder and put the tests where they belong.
+8. [ ] Add the option to choose e2e project.
+9. [ ] Make the option to choose the testing framework depend on the project type that the user chooses, for example if the user chooses lib then the testing framework will be vitest or jest, if the user chooses e2e then the testing framework will be cypress or playwright, if the user chooses app then the testing framework will be vitest or jest.
