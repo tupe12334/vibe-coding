@@ -12,6 +12,7 @@ export const generalRules = [
   "After finishing the task make sure to run format, lint, test and build commands.",
   "Don't use file extensions in imports, use absolute imports instead.",
   "Don't test mocks",
+  "Don't push a binary file like `.png` in a pull request.",
 ] as const;
 
 export type GeneralRule = (typeof generalRules)[number];
