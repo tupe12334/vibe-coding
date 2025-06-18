@@ -63,7 +63,7 @@ export const main = async () => {
 
   const mdFile = await builder(builderOptions);
   const path = await outputPath();
-  await writeFile(`${path}/Agents.md`, mdFile, "utf-8");
+  await writeFile(`${path}/AGENTS.md`, mdFile, "utf-8");
 };
 
 (async () => {
