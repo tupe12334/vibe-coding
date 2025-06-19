@@ -208,5 +208,19 @@ exports[`generalSegment > returns general guidelines 1`] = `
     ],
     "type": "listItem",
   },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "Always use a package to manage and validate environment variables.",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "listItem",
+  },
 ]
 `;

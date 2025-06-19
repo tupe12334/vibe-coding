@@ -13,6 +13,7 @@ export const generalRules = [
   "Don't use file extensions in imports, use absolute imports instead.",
   "Don't test mocks",
   "Don't push a binary file like `.png` in a pull request.",
+  "Always use a package to manage and validate environment variables.",
 ] as const;
 
 export type GeneralRule = (typeof generalRules)[number];
