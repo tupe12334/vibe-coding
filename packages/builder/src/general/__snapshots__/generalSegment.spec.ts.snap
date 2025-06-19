@@ -222,5 +222,19 @@ exports[`generalSegment > returns general guidelines 1`] = `
     ],
     "type": "listItem",
   },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "If you change or create a test in you work, always run the test and make sure it passes.",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "listItem",
+  },
 ]
 `;
