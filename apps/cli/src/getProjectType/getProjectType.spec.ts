@@ -37,4 +37,13 @@ describe("getProjectType", () => {
 
     expect(result).toBeNull();
   });
+
+  it("returns e2e when selected", async () => {
+    const selectMock = vi.mocked(select);
+    selectMock.mockResolvedValueOnce("e2e");
+
+    const result = await getProjectType();
+
+    expect(result).toBe("e2e");
+  });
 });
