@@ -53,6 +53,8 @@ Package Manager: npm
 
 * Use template literals for string interpolation.
 
+* Use for-of loops for iterating over arrays.
+
 ## Lint system (eslint)
 
 * Use ESLint to enforce code quality and style guidelines.
@@ -382,6 +384,8 @@ exports[`builder > working with language and lint system 1`] = `
 
 * Use template literals for string interpolation.
 
+* Use for-of loops for iterating over arrays.
+
 ## Lint system (eslint)
 
 * Use ESLint to enforce code quality and style guidelines.
@@ -442,6 +446,8 @@ Package Manager: npm
 * Use arrow functions for anonymous functions.
 
 * Use template literals for string interpolation.
+
+* Use for-of loops for iterating over arrays.
 "
 `;
 
@@ -491,6 +497,8 @@ exports[`builder > working with language only 1`] = `
 * Use arrow functions for anonymous functions.
 
 * Use template literals for string interpolation.
+
+* Use for-of loops for iterating over arrays.
 "
 `;
 
@@ -544,6 +552,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Use arrow functions for anonymous functions.
 
 * Use template literals for string interpolation.
+
+* Use for-of loops for iterating over arrays.
 "
 `;
 
@@ -597,6 +607,8 @@ exports[`builder > working with language, project type and framework 1`] = `
 * Use arrow functions for anonymous functions.
 
 * Use template literals for string interpolation.
+
+* Use for-of loops for iterating over arrays.
 
 ## Project type (backend)
 
@@ -1178,6 +1190,8 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 * Use arrow functions for anonymous functions.
 
 * Use template literals for string interpolation.
+
+* Use for-of loops for iterating over arrays.
 
 ## Project type (lib)
 
