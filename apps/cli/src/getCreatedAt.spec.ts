@@ -9,7 +9,7 @@ describe("getCreatedAt", () => {
   it("prompts user about adding timestamp", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce(true);
-    const { getCreatedAt } = await import("../getCreatedAt");
+    const { getCreatedAt } = await import("./getCreatedAt");
 
     const result = await getCreatedAt();
 
@@ -28,7 +28,7 @@ describe("getCreatedAt", () => {
   it("returns null when skip is chosen", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce(null);
-    const { getCreatedAt } = await import("../getCreatedAt");
+    const { getCreatedAt } = await import("./getCreatedAt");
 
     const result = await getCreatedAt();
 

@@ -11,6 +11,7 @@ import { getPackageManager } from "./getPackageManager/getPackageManager";
 import { getReleaseSystem } from "./getReleaseSystem";
 import { getMonorepoSystem } from "./getMonorepoSystem";
 import { getCreatedAt } from "./getCreatedAt";
+import { e2ePreferences } from "./e2ePreferences";
 
 export const main = async () => {
   let builderOptions: BuilderOptions = {};
@@ -30,6 +31,9 @@ export const main = async () => {
     const testing = await getTestingFramework(builderOptions.projectType);
     if (testing) {
       builderOptions.testFramework = testing;
+    }
+    if (builderOptions.projectType === "e2e") {
+      await e2ePreferences();
     }
   }
 
