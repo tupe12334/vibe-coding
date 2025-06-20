@@ -52,7 +52,7 @@ describe("builder", () => {
   });
 
   test("working with project type e2e", async () => {
-    const response = await builder({ projectType: "e2e" });
+    const response = await builder({ projectType: "e2e", networkMocking: "msw" });
 
     expect(response).toMatchSnapshot();
   });
@@ -112,6 +112,7 @@ describe("builder", () => {
     const response = await builder({
       projectType: "e2e",
       framework: "playwright",
+      networkMocking: "msw",
     });
 
     expect(response).toMatchSnapshot();

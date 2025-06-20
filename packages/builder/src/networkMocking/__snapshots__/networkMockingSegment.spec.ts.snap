@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`networkMockingSegment > returns network mocking line 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "Network mocking: msw",
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;

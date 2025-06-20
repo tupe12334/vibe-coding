@@ -12,6 +12,7 @@ import { BuilderOptions } from "./BuilderOptions";
 import { createdAtSegment } from "./createdAt/createdAtSegment";
 import { testingSegment } from "./testing/testingSegment";
 import { uiSegment } from "./ui/uiSegment";
+import { networkMockingSegment } from "./networkMocking/networkMockingSegment";
 
 export async function builder(options?: BuilderOptions): Promise<string> {
   const tree: Root = {
@@ -39,6 +40,7 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     monorepoSystem,
     cicdSystem,
     createdAt,
+    networkMocking,
   } = options;
   if (packageManager) {
     tree.children.push({
@@ -77,6 +79,11 @@ export async function builder(options?: BuilderOptions): Promise<string> {
     // Extract to function and add spec `toIncludeUIGuidelines`
     if (projectType === "frontend" || projectType === "ui-lib") {
       tree.children = tree.children.concat(await uiSegment());
+    }
+    if (projectType === "e2e" && networkMocking) {
+      tree.children = tree.children.concat(
+        await networkMockingSegment(networkMocking)
+      );
     }
   }
 

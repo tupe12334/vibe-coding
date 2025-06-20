@@ -33,7 +33,10 @@ export const main = async () => {
       builderOptions.testFramework = testing;
     }
     if (builderOptions.projectType === "e2e") {
-      await e2ePreferences();
+      const networkMocking = await e2ePreferences();
+      if (networkMocking) {
+        builderOptions.networkMocking = networkMocking;
+      }
     }
   }
 
