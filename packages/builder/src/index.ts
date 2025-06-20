@@ -20,3 +20,4 @@ export {
   testingSegment,
 } from "./testing";
 export { uiSegment } from "./ui/uiSegment";
+export { networkMockingSegment } from "./networkMocking";

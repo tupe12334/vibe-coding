@@ -841,7 +841,7 @@ exports[`builder > working with project type and framework - e2e with playwright
 
 * Use screenshot testing when possible to detect visual regressions.
 
-* Use msw (Mock Service Worker) for API mocking in tests to ensure consistent and reliable test environments.
+Network mocking: msw
 
 ## Framework (playwright)
 
@@ -1067,7 +1067,7 @@ exports[`builder > working with project type e2e 1`] = `
 
 * Use screenshot testing when possible to detect visual regressions.
 
-* Use msw (Mock Service Worker) for API mocking in tests to ensure consistent and reliable test environments.
+Network mocking: msw
 "
 `;
 

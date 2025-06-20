@@ -6,6 +6,7 @@ type BaseBuilderOptions = {
   cicdSystem?: string;
   createdAt?: boolean;
   testFramework?: string;
+  networkMocking?: string;
 };
 type BuilderOptionsWithLanguage = {
   language: string;

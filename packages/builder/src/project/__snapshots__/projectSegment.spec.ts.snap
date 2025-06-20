@@ -46,20 +46,6 @@ exports[`projectSegment > e2e project returns e2e rules 1`] = `
         ],
         "type": "listItem",
       },
-      {
-        "children": [
-          {
-            "children": [
-              {
-                "type": "text",
-                "value": "Use msw (Mock Service Worker) for API mocking in tests to ensure consistent and reliable test environments.",
-              },
-            ],
-            "type": "paragraph",
-          },
-        ],
-        "type": "listItem",
-      },
     ],
     "ordered": false,
     "type": "list",
