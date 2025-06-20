@@ -14,7 +14,7 @@ describe("getReleaseSystem", () => {
   it("prompts user with release system options", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce("release-it");
-    const { getReleaseSystem } = await import("../getReleaseSystem");
+    const { getReleaseSystem } = await import("./getReleaseSystem");
 
     const result = await getReleaseSystem();
 
@@ -32,7 +32,7 @@ describe("getReleaseSystem", () => {
   it("returns null when skip is chosen", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce(null);
-    const { getReleaseSystem } = await import("../getReleaseSystem");
+    const { getReleaseSystem } = await import("./getReleaseSystem");
 
     const result = await getReleaseSystem();
 

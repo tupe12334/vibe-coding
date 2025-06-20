@@ -14,7 +14,7 @@ describe("getMonorepoSystem", () => {
   it("prompts user with monorepo system options", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce("nx");
-    const { getMonorepoSystem } = await import("../getMonorepoSystem");
+    const { getMonorepoSystem } = await import("./getMonorepoSystem");
 
     const result = await getMonorepoSystem();
 
@@ -32,7 +32,7 @@ describe("getMonorepoSystem", () => {
   it("returns null when skip is chosen", async () => {
     const selectMock = vi.mocked(select);
     selectMock.mockResolvedValueOnce(null);
-    const { getMonorepoSystem } = await import("../getMonorepoSystem");
+    const { getMonorepoSystem } = await import("./getMonorepoSystem");
 
     const result = await getMonorepoSystem();
 
