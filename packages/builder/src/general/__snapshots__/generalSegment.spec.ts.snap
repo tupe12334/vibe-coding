@@ -236,5 +236,19 @@ exports[`generalSegment > returns general guidelines 1`] = `
     ],
     "type": "listItem",
   },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "Try to have less then 50 lines of code in a single file.",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "listItem",
+  },
 ]
 `;

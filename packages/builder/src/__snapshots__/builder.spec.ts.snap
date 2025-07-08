@@ -37,6 +37,8 @@ exports[`builder > working with all options including framework 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -116,6 +118,8 @@ exports[`builder > working with cicd system only 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## CI/CD system (github-actions)
 
 * CI process should run lint, test and steps preferably in parallel if posable.
@@ -161,6 +165,8 @@ exports[`builder > working with createdAt option 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 Created at: 2020-01-01T00:00:00.000Z
 "
 `;
@@ -201,6 +207,8 @@ exports[`builder > working with framework only - cypress 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Framework (cypress)
 
@@ -245,6 +253,8 @@ exports[`builder > working with framework only - nestjs 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## Framework (nestjs)
 
 * Separate the folder structure into domain driven design (DDD) modules, i.e. each module should have its own folder with controllers, services, and entities.
@@ -287,6 +297,8 @@ exports[`builder > working with framework only - playwright 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Framework (playwright)
 
@@ -331,6 +343,8 @@ exports[`builder > working with framework only - react 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
@@ -373,6 +387,8 @@ exports[`builder > working with language and lint system 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Programming language (javascript)
 
@@ -431,6 +447,8 @@ exports[`builder > working with language and package manager 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 Package Manager: npm
 
 ## Programming language (typescript)
@@ -488,6 +506,8 @@ exports[`builder > working with language only 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## Programming language (javascript)
 
 * Use \\\`const\\\` over \\\`let\\\` unless reassignment is needed.
@@ -538,6 +558,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Programming language (typescript)
 
@@ -593,6 +615,8 @@ exports[`builder > working with language, project type and framework 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Programming language (typescript)
 
@@ -657,6 +681,8 @@ exports[`builder > working with monorepo system only 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 Monorepo system: turbo
 "
 `;
@@ -697,6 +723,8 @@ exports[`builder > working with no arguments returns general segment only 1`] = 
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 "
 `;
 
@@ -736,6 +764,8 @@ exports[`builder > working with project type and cicd system 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## CI/CD system (gitlab-ci)
 
@@ -800,6 +830,8 @@ exports[`builder > working with project type and framework - backend with nestjs
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## Project type (backend)
 
 * Always validate endpoint request data.
@@ -846,6 +878,8 @@ exports[`builder > working with project type and framework - e2e with playwright
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Project type (e2e)
 
@@ -897,6 +931,8 @@ exports[`builder > working with project type and framework - frontend with react
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Project type (frontend)
 
@@ -952,6 +988,8 @@ exports[`builder > working with project type and monorepo system 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 Monorepo system: nx
 
@@ -1011,6 +1049,8 @@ exports[`builder > working with project type and release system 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Project type (lib)
 
@@ -1073,6 +1113,8 @@ exports[`builder > working with project type e2e 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## Project type (e2e)
 
 * Structure tests using the Page Object Model (POM) for maintainability.
@@ -1119,6 +1161,8 @@ exports[`builder > working with project type lib 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Project type (lib)
 
@@ -1176,6 +1220,8 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Programming language (typescript)
 
@@ -1250,6 +1296,8 @@ exports[`builder > working with project type only 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## Project type (frontend)
 
 * Prefer working with flex layouts for responsive design.
@@ -1300,6 +1348,8 @@ exports[`builder > working with project type ui-lib 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Project type (ui-lib)
 
@@ -1379,6 +1429,8 @@ exports[`builder > working with release system only 1`] = `
 
 * If you change or create a test in you work, always run the test and make sure it passes.
 
+* Try to have less then 50 lines of code in a single file.
+
 ## Release system (release-it)
 
 * Use release-it for interactive version management and publishing.
@@ -1421,6 +1473,8 @@ exports[`builder > working with test framework only 1`] = `
 * Always use a package to manage and validate environment variables.
 
 * If you change or create a test in you work, always run the test and make sure it passes.
+
+* Try to have less then 50 lines of code in a single file.
 
 ## Testing framework (jest)
 
