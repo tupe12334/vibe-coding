@@ -250,5 +250,19 @@ exports[`generalSegment > returns general guidelines 1`] = `
     ],
     "type": "listItem",
   },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "Prefer using composite prop types over primitive types.",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "listItem",
+  },
 ]
 `;

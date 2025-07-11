@@ -16,6 +16,7 @@ export const generalRules = [
   "Always use a package to manage and validate environment variables.",
   "If you change or create a test in you work, always run the test and make sure it passes.",
   "Try to have less then 50 lines of code in a single file.",
+  "Prefer using composite prop types over primitive types.",
 ] as const;
 
 export type GeneralRule = (typeof generalRules)[number];
