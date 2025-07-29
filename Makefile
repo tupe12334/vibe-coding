@@ -111,9 +111,9 @@ update-cli-builder-version: ## Update @vibe-builder/builder version in CLI packa
 	@echo "Getting latest builder version..."
 	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
 	@echo "Updating CLI package to use builder version $(BUILDER_VERSION)..."
-	@echo "Note: Using exact version reference instead of workspace for publishing"
-	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "workspace:\^"/"@vibe-builder\/builder": "$(BUILDER_VERSION)"/' package.json
-	@echo "Updated CLI package.json to reference @vibe-builder/builder@$(BUILDER_VERSION)"
+	@echo "Note: Using caret range for semantic versioning"
+	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "workspace:\^"/"@vibe-builder\/builder": "^$(BUILDER_VERSION)"/' package.json
+	@echo "Updated CLI package.json to reference @vibe-builder/builder@^$(BUILDER_VERSION)"
 
 # Restore CLI package to use workspace dependency (for development)
 restore-cli-workspace: ## Restore CLI package to use workspace dependency for development
@@ -132,16 +132,18 @@ release-flow-dry: check-git clean install ## Dry run of complete release flow (s
 	pnpm lint
 	@echo "Step 4: DRY RUN - Would release builder package..."
 	cd packages/builder && npm publish --dry-run
-	@echo "Step 5: Would update CLI package to use latest builder version..."
+	@echo "Step 5: Would get new builder version..."
 	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
 	@echo "Current builder version: $(BUILDER_VERSION)"
-	@echo "Would change CLI package.json dependency from workspace:^ to $(BUILDER_VERSION)"
-	@echo "Step 6: Would install dependencies with exact version..."
-	@echo "Step 7: Would build CLI package..."
+	@echo "After release, builder would be bumped to next patch version"
+	@echo "Step 6: Would update CLI package.json dependency..."
+	@echo "Would change CLI package.json dependency from workspace:^ to ^$(BUILDER_VERSION) (or next version)"
+	@echo "Step 7: Would install dependencies with published version..."
+	@echo "Step 8: Would build CLI package..."
 	cd apps/cli && pnpm build
-	@echo "Step 8: DRY RUN - Would publish CLI package..."
+	@echo "Step 9: DRY RUN - Would publish CLI package..."
 	cd apps/cli && npm publish --dry-run
-	@echo "Step 9: Would restore workspace dependency for development..."
+	@echo "Step 10: Would restore workspace dependency for development..."
 	@echo "=== DRY RUN completed successfully! ==="
 	@echo "No actual releases were made - this was just a test run"
 
@@ -156,17 +158,18 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	pnpm lint
 	@echo "Step 4: Releasing builder package..."
 	cd packages/builder && pnpm release
-	@echo "Step 5: Updating CLI package to use latest builder version..."
+	@echo "Step 5: Getting new builder version..."
 	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
-	@echo "Using builder version: $(BUILDER_VERSION)"
-	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "workspace:\^"/"@vibe-builder\/builder": "$(BUILDER_VERSION)"/' package.json
-	@echo "Step 6: Installing dependencies with exact version..."
+	@echo "Builder released as version: $(BUILDER_VERSION)"
+	@echo "Step 6: Updating CLI package to use published builder version..."
+	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "workspace:\^"/"@vibe-builder\/builder": "^$(BUILDER_VERSION)"/' package.json
+	@echo "Step 7: Installing dependencies with published version..."
 	pnpm install
-	@echo "Step 7: Building CLI package..."
+	@echo "Step 8: Building CLI package..."
 	cd apps/cli && pnpm build
-	@echo "Step 8: Publishing CLI package..."
+	@echo "Step 9: Publishing CLI package..."
 	cd apps/cli && npm publish
-	@echo "Step 9: Restoring workspace dependency for development..."
+	@echo "Step 10: Restoring workspace dependency for development..."
 	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "[^"]*"/"@vibe-builder\/builder": "workspace:^"/' package.json
 	pnpm install
 	@echo "=== Release flow completed successfully! ==="
