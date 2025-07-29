@@ -158,19 +158,10 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	pnpm test
 	@echo "Step 3: Running linting..."
 	pnpm lint
-	@echo "Step 4: Publishing builder package directly..."
-	# Create temporary directory for publishing to avoid workspace issues
-	rm -rf /tmp/vibe-builder-publish
-	mkdir -p /tmp/vibe-builder-publish
-	cp -r packages/builder/* /tmp/vibe-builder-publish/
-	cd /tmp/vibe-builder-publish && npm version patch --no-git-tag-version
-	cd /tmp/vibe-builder-publish && npm publish
-	@echo "Step 5: Updating local builder version and creating git tag..."
-	$(eval BUILDER_VERSION := $(shell cd /tmp/vibe-builder-publish && node -p "require('./package.json').version"))
-	cd packages/builder && sed -i '' 's/"version": "[^"]*"/"version": "$(BUILDER_VERSION)"/' package.json
-	git add packages/builder/package.json
-	git commit -m "chore: release @vibe-builder/builder@$(BUILDER_VERSION)"
-	git tag "builder-v$(BUILDER_VERSION)"
+	@echo "Step 4: Publishing builder package using release-it..."
+	cd packages/builder && pnpm release
+	@echo "Step 5: Getting the new builder version..."
+	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
 	@echo "Step 6: Updating CLI package to use published builder version..."
 	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "workspace:\^"/"@vibe-builder\/builder": "^$(BUILDER_VERSION)"/' package.json
 	@echo "Step 7: Installing dependencies with published version..."
