@@ -1,7 +1,8 @@
 # Makefile for vibe-coding monorepo
 # This Makefile provides commands to build, test, lint, and publish packages
 
-.PHONY: help install clean build test lint publish publish-dry publish-builder publish-cli check-deps check-git status release-flow release-flow-dry update-cli-builder-version restore-cli-workspace
+.PHONY: help install clean buil	@echo "Step 8: DRY RUN - Would publish CLI package..."
+	cd apps/cli && npm publish --dry-run --access publictest lint publish publish-dry publish-builder publish-cli check-deps check-git status release-flow release-flow-dry update-cli-builder-version restore-cli-workspace
 
 # Default target
 help: ## Display this help message
@@ -81,7 +82,7 @@ publish-dry: pre-publish ## Dry run publish (shows what would be published)
 	@echo "Builder package:"
 	cd packages/builder && npm publish --dry-run
 	@echo "CLI package:"
-	cd apps/cli && npm publish --dry-run
+	cd apps/cli && npm publish --dry-run --access public
 
 # Publishing individual packages
 publish-builder: ## Publish builder package only
@@ -90,7 +91,7 @@ publish-builder: ## Publish builder package only
 
 publish-cli: ## Publish CLI package only
 	@echo "Publishing CLI package..."
-	cd apps/cli && npm publish
+	cd apps/cli && npm publish --access public
 
 # Publishing all packages
 publish: pre-publish ## Build and publish all packages
@@ -167,7 +168,7 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	cd /tmp/vibe-builder-publish && npm publish
 	@echo "Step 5: Updating local builder version and creating git tag..."
 	$(eval BUILDER_VERSION := $(shell cd /tmp/vibe-builder-publish && node -p "require('./package.json').version"))
-	cd packages/builder && npm version $(BUILDER_VERSION) --no-git-tag-version
+	cd packages/builder && sed -i '' 's/"version": "[^"]*"/"version": "$(BUILDER_VERSION)"/' package.json
 	git add packages/builder/package.json
 	git commit -m "chore: release @vibe-builder/builder@$(BUILDER_VERSION)"
 	git tag "builder-v$(BUILDER_VERSION)"
@@ -178,7 +179,7 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	@echo "Step 8: Building CLI package..."
 	cd apps/cli && pnpm build
 	@echo "Step 9: Publishing CLI package..."
-	cd apps/cli && npm publish
+	cd apps/cli && npm publish --access public
 	@echo "Step 10: Restoring workspace dependency for development..."
 	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "[^"]*"/"@vibe-builder\/builder": "workspace:^"/' package.json
 	pnpm install
