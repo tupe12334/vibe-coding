@@ -59,6 +59,8 @@ Package Manager: npm
 
 * Use for-of loops for iterating over arrays.
 
+* When writing a function do not return undefined, return null instead.
+
 ## Lint system (eslint)
 
 * Use ESLint to enforce code quality and style guidelines.
@@ -418,6 +420,8 @@ exports[`builder > working with language and lint system 1`] = `
 
 * Use for-of loops for iterating over arrays.
 
+* When writing a function do not return undefined, return null instead.
+
 ## Lint system (eslint)
 
 * Use ESLint to enforce code quality and style guidelines.
@@ -484,6 +488,8 @@ Package Manager: npm
 * Use template literals for string interpolation.
 
 * Use for-of loops for iterating over arrays.
+
+* When writing a function do not return undefined, return null instead.
 "
 `;
 
@@ -539,6 +545,8 @@ exports[`builder > working with language only 1`] = `
 * Use template literals for string interpolation.
 
 * Use for-of loops for iterating over arrays.
+
+* When writing a function do not return undefined, return null instead.
 "
 `;
 
@@ -598,6 +606,8 @@ exports[`builder > working with language only with a language that is superset 1
 * Use template literals for string interpolation.
 
 * Use for-of loops for iterating over arrays.
+
+* When writing a function do not return undefined, return null instead.
 "
 `;
 
@@ -657,6 +667,8 @@ exports[`builder > working with language, project type and framework 1`] = `
 * Use template literals for string interpolation.
 
 * Use for-of loops for iterating over arrays.
+
+* When writing a function do not return undefined, return null instead.
 
 ## Project type (backend)
 
@@ -1284,6 +1296,8 @@ exports[`builder > working with project type lib and language typescript 1`] = `
 * Use template literals for string interpolation.
 
 * Use for-of loops for iterating over arrays.
+
+* When writing a function do not return undefined, return null instead.
 
 ## Project type (lib)
 
