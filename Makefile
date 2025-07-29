@@ -164,7 +164,24 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	mkdir -p /tmp/vibe-builder-publish
 	cp -r packages/builder/* /tmp/vibe-builder-publish/
 	cd /tmp/vibe-builder-publish && npm version patch --no-git-tag-version
-	cd /tmp/vibe-builder-publish && npm publish
+	@echo "Attempting to publish builder package..."
+	@max_attempts=10; \
+	attempt=1; \
+	while [ $$attempt -le $$max_attempts ]; do \
+		echo "Publish attempt $$attempt/$$max_attempts..."; \
+		if cd /tmp/vibe-builder-publish && npm publish 2>/dev/null; then \
+			echo "Successfully published on attempt $$attempt"; \
+			break; \
+		else \
+			if [ $$attempt -eq $$max_attempts ]; then \
+				echo "Failed to publish after $$max_attempts attempts"; \
+				exit 1; \
+			fi; \
+			echo "Publish failed, incrementing version and retrying..."; \
+			cd /tmp/vibe-builder-publish && npm version patch --no-git-tag-version; \
+			attempt=$$((attempt + 1)); \
+		fi; \
+	done
 	@echo "Step 5: Updating local builder version and creating git tag..."
 	$(eval BUILDER_VERSION := $(shell cd /tmp/vibe-builder-publish && node -p "require('./package.json').version"))
 	cd packages/builder && sed -i '' 's/"version": "[^"]*"/"version": "$(BUILDER_VERSION)"/' package.json
