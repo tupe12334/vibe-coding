@@ -132,7 +132,7 @@ release-flow-dry: check-git clean install ## Dry run of complete release flow (s
 	pnpm lint
 	@echo "Step 4: DRY RUN - Would publish builder package directly..."
 	@echo "Would run: npm version patch --no-git-tag-version"
-	@echo "Would run: npm publish"
+	@echo "Would retry up to 10 times with version increments if conflicts occur"
 	cd packages/builder && npm publish --dry-run
 	@echo "Step 5: Would create git tag for builder..."
 	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
@@ -144,6 +144,7 @@ release-flow-dry: check-git clean install ## Dry run of complete release flow (s
 	@echo "Step 8: Would build CLI package..."
 	cd apps/cli && pnpm build
 	@echo "Step 9: DRY RUN - Would publish CLI package..."
+	@echo "Would retry up to 10 times with version increments if conflicts occur"
 	cd apps/cli && npm publish --dry-run
 	@echo "Step 10: Would restore workspace dependency for development..."
 	@echo "=== DRY RUN completed successfully! ==="
@@ -195,7 +196,24 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	@echo "Step 8: Building CLI package..."
 	cd apps/cli && pnpm build
 	@echo "Step 9: Publishing CLI package..."
-	cd apps/cli && npm publish --access public
+	@echo "Attempting to publish CLI package..."
+	@max_attempts=10; \
+	attempt=1; \
+	while [ $$attempt -le $$max_attempts ]; do \
+		echo "CLI publish attempt $$attempt/$$max_attempts..."; \
+		if cd apps/cli && npm publish --access public 2>/dev/null; then \
+			echo "Successfully published CLI on attempt $$attempt"; \
+			break; \
+		else \
+			if [ $$attempt -eq $$max_attempts ]; then \
+				echo "Failed to publish CLI after $$max_attempts attempts"; \
+				exit 1; \
+			fi; \
+			echo "CLI publish failed, incrementing version and retrying..."; \
+			cd apps/cli && npm version patch --no-git-tag-version; \
+			attempt=$$((attempt + 1)); \
+		fi; \
+	done
 	@echo "Step 10: Restoring workspace dependency for development..."
 	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "[^"]*"/"@vibe-builder\/builder": "workspace:^"/' package.json
 	pnpm install
