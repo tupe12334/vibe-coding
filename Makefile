@@ -1,8 +1,7 @@
 # Makefile for vibe-coding monorepo
 # This Makefile provides commands to build, test, lint, and publish packages
 
-.PHONY: help install clean buil	@echo "Step 8: DRY RUN - Would publish CLI package..."
-	cd apps/cli && npm publish --dry-run --access publictest lint publish publish-dry publish-builder publish-cli check-deps check-git status release-flow release-flow-dry update-cli-builder-version restore-cli-workspace
+.PHONY: help install clean build test lint publish publish-dry publish-builder publish-cli check-deps check-git status release-flow release-flow-dry update-cli-builder-version restore-cli-workspace
 
 # Default target
 help: ## Display this help message

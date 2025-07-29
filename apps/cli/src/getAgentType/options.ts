@@ -13,8 +13,8 @@ export const agentOptions: AgentConfig[] = [
   },
   {
     type: "gemini",
-    fileName: "Gemini.md",
-    path: "Gemini.md",
+    fileName: "GEMINI.md",
+    path: "GEMINI.md",
   },
 ];
 
