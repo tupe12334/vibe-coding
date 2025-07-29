@@ -130,9 +130,11 @@ release-flow-dry: check-git clean install ## Dry run of complete release flow (s
 	pnpm test
 	@echo "Step 3: Running linting..."
 	pnpm lint
-	@echo "Step 4: DRY RUN - Would release builder package..."
+	@echo "Step 4: DRY RUN - Would publish builder package directly..."
+	@echo "Would run: npm version patch --no-git-tag-version"
+	@echo "Would run: npm publish"
 	cd packages/builder && npm publish --dry-run
-	@echo "Step 5: Would get new builder version..."
+	@echo "Step 5: Would create git tag for builder..."
 	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
 	@echo "Current builder version: $(BUILDER_VERSION)"
 	@echo "After release, builder would be bumped to next patch version"
@@ -156,11 +158,14 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	pnpm test
 	@echo "Step 3: Running linting..."
 	pnpm lint
-	@echo "Step 4: Releasing builder package..."
-	cd packages/builder && pnpm release
-	@echo "Step 5: Getting new builder version..."
+	@echo "Step 4: Publishing builder package directly..."
+	cd packages/builder && npm version patch --no-git-tag-version
+	cd packages/builder && npm publish
+	@echo "Step 5: Creating git tag for builder..."
 	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
-	@echo "Builder released as version: $(BUILDER_VERSION)"
+	git add packages/builder/package.json
+	git commit -m "chore: release @vibe-builder/builder@$(BUILDER_VERSION)"
+	git tag "builder-v$(BUILDER_VERSION)"
 	@echo "Step 6: Updating CLI package to use published builder version..."
 	cd apps/cli && sed -i '' 's/"@vibe-builder\/builder": "workspace:\^"/"@vibe-builder\/builder": "^$(BUILDER_VERSION)"/' package.json
 	@echo "Step 7: Installing dependencies with published version..."
