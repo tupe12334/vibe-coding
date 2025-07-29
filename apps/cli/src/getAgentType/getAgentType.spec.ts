@@ -3,49 +3,63 @@ import { getAgentType } from "./getAgentType";
 
 // Mock the inquirer prompts
 vi.mock("@inquirer/prompts", () => ({
-  select: vi.fn(),
+  checkbox: vi.fn(),
 }));
 
 describe("getAgentType", () => {
-  it("should return the selected agent type", async () => {
-    const { select } = await import("@inquirer/prompts");
-    const mockSelect = vi.mocked(select);
+  it("should return the selected agent types", async () => {
+    const { checkbox } = await import("@inquirer/prompts");
+    const mockCheckbox = vi.mocked(checkbox);
     
-    mockSelect.mockResolvedValue("copilot");
+    mockCheckbox.mockResolvedValue(["copilot", "gemini"]);
 
     const result = await getAgentType();
 
-    expect(result).toBe("copilot");
-    expect(mockSelect).toHaveBeenCalledWith({
-      message: "Which AI agent are you working with?",
-      default: "codex",
+    expect(result).toEqual(["copilot", "gemini"]);
+    expect(mockCheckbox).toHaveBeenCalledWith({
+      message: "Which AI agents are you working with? (Select multiple)",
       choices: [
-        { name: "Codex", value: "codex" },
-        { name: "Copilot", value: "copilot" },
-        { name: "Gemini", value: "gemini" },
+        { name: "Codex", value: "codex", checked: true },
+        { name: "Copilot", value: "copilot", checked: false },
+        { name: "Gemini", value: "gemini", checked: false },
       ],
+      validate: expect.any(Function),
     });
   });
 
-  it("should return codex as default when no selection is made", async () => {
-    const { select } = await import("@inquirer/prompts");
-    const mockSelect = vi.mocked(select);
+  it("should return codex as default when selected", async () => {
+    const { checkbox } = await import("@inquirer/prompts");
+    const mockCheckbox = vi.mocked(checkbox);
     
-    mockSelect.mockResolvedValue("codex");
+    mockCheckbox.mockResolvedValue(["codex"]);
 
     const result = await getAgentType();
 
-    expect(result).toBe("codex");
+    expect(result).toEqual(["codex"]);
   });
 
-  it("should return gemini when selected", async () => {
-    const { select } = await import("@inquirer/prompts");
-    const mockSelect = vi.mocked(select);
+  it("should return multiple agents when selected", async () => {
+    const { checkbox } = await import("@inquirer/prompts");
+    const mockCheckbox = vi.mocked(checkbox);
     
-    mockSelect.mockResolvedValue("gemini");
+    mockCheckbox.mockResolvedValue(["codex", "copilot", "gemini"]);
 
     const result = await getAgentType();
 
-    expect(result).toBe("gemini");
+    expect(result).toEqual(["codex", "copilot", "gemini"]);
+  });
+
+  it("should validate that at least one agent is selected", async () => {
+    const { checkbox } = await import("@inquirer/prompts");
+    const mockCheckbox = vi.mocked(checkbox);
+    
+    mockCheckbox.mockResolvedValue(["copilot"]);
+
+    await getAgentType();
+
+    const callArgs = mockCheckbox.mock.calls[0][0];
+    
+    // Check that validate function exists
+    expect(callArgs.validate).toBeDefined();
   });
 });
