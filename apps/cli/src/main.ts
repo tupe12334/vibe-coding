@@ -75,16 +75,16 @@ export const main = async () => {
 
   const mdFile = await builder(builderOptions);
   const outputBasePath = await outputPath();
-  
+
   // Generate files for each selected agent
   for (const agentType of agentTypes) {
     const agentConfig = getAgentConfig(agentType);
     const fullPath = join(outputBasePath, agentConfig.path);
-    
+
     // Ensure the directory exists (for .github folder)
     const dir = dirname(fullPath);
     await mkdir(dir, { recursive: true });
-    
+
     await writeFile(fullPath, mdFile, "utf-8");
   }
 };

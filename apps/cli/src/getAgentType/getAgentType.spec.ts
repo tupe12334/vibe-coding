@@ -10,7 +10,7 @@ describe("getAgentType", () => {
   it("should return the selected agent types", async () => {
     const { checkbox } = await import("@inquirer/prompts");
     const mockCheckbox = vi.mocked(checkbox);
-    
+
     mockCheckbox.mockResolvedValue(["copilot", "gemini"]);
 
     const result = await getAgentType();
@@ -30,7 +30,7 @@ describe("getAgentType", () => {
   it("should return codex as default when selected", async () => {
     const { checkbox } = await import("@inquirer/prompts");
     const mockCheckbox = vi.mocked(checkbox);
-    
+
     mockCheckbox.mockResolvedValue(["codex"]);
 
     const result = await getAgentType();
@@ -41,7 +41,7 @@ describe("getAgentType", () => {
   it("should return multiple agents when selected", async () => {
     const { checkbox } = await import("@inquirer/prompts");
     const mockCheckbox = vi.mocked(checkbox);
-    
+
     mockCheckbox.mockResolvedValue(["codex", "copilot", "gemini"]);
 
     const result = await getAgentType();
@@ -52,13 +52,13 @@ describe("getAgentType", () => {
   it("should validate that at least one agent is selected", async () => {
     const { checkbox } = await import("@inquirer/prompts");
     const mockCheckbox = vi.mocked(checkbox);
-    
+
     mockCheckbox.mockResolvedValue(["copilot"]);
 
     await getAgentType();
 
     const callArgs = mockCheckbox.mock.calls[0][0];
-    
+
     // Check that validate function exists
     expect(callArgs.validate).toBeDefined();
   });
