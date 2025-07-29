@@ -159,10 +159,15 @@ release-flow: check-git clean install ## Complete release flow: build -> release
 	@echo "Step 3: Running linting..."
 	pnpm lint
 	@echo "Step 4: Publishing builder package directly..."
-	cd packages/builder && npm version patch --no-git-tag-version
-	cd packages/builder && npm publish
-	@echo "Step 5: Creating git tag for builder..."
-	$(eval BUILDER_VERSION := $(shell cd packages/builder && node -p "require('./package.json').version"))
+	# Create temporary directory for publishing to avoid workspace issues
+	rm -rf /tmp/vibe-builder-publish
+	mkdir -p /tmp/vibe-builder-publish
+	cp -r packages/builder/* /tmp/vibe-builder-publish/
+	cd /tmp/vibe-builder-publish && npm version patch --no-git-tag-version
+	cd /tmp/vibe-builder-publish && npm publish
+	@echo "Step 5: Updating local builder version and creating git tag..."
+	$(eval BUILDER_VERSION := $(shell cd /tmp/vibe-builder-publish && node -p "require('./package.json').version"))
+	cd packages/builder && npm version $(BUILDER_VERSION) --no-git-tag-version
 	git add packages/builder/package.json
 	git commit -m "chore: release @vibe-builder/builder@$(BUILDER_VERSION)"
 	git tag "builder-v$(BUILDER_VERSION)"
