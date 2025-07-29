@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^7.5.3",
-    "@vibe-builder/builder": "workspace:^"
+    "@vibe-builder/builder": "^0.1.1"
   }
 }
