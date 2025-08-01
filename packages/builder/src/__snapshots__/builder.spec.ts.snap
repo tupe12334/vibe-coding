@@ -82,6 +82,7 @@ Package Manager: npm
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
+* Don't put logic into hooks, hold them in functions and just call them inside the needed hooks.
 "
 `;
 
@@ -364,6 +365,7 @@ exports[`builder > working with framework only - react 1`] = `
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
+* Don't put logic into hooks, hold them in functions and just call them inside the needed hooks.
 "
 `;
 
@@ -997,6 +999,7 @@ exports[`builder > working with project type and framework - frontend with react
 ## Framework (react)
 
 * Use key in React lists to help React identify which items have changed, are added, or removed.
+* Don't put logic into hooks, hold them in functions and just call them inside the needed hooks.
 "
 `;
 
