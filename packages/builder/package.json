@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "tsc --noEmit",
+    "lint": "tsc --noEmit && eslint .",
     "prebuild": "rimraf dist",
     "build:w": "tsc --watch",
     "test": "vitest run",
@@ -28,9 +28,11 @@
     "@types/mdast": "^4.0.4",
     "@types/node": "^24.0.1",
     "@vitest/ui": "3.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-agent": "^3.1.0",
     "release-it": "^19.0.3",
-    "typescript": "~5.1.6",
     "rimraf": "^6.0.1",
+    "typescript": "~5.1.6",
     "vitest": "^3.2.3"
   },
   "packageManager": "pnpm@10.12.1",
