@@ -18,3 +18,7 @@ This repository uses [Turborepo](https://turbo.build) for managing tasks across 
 - `pnpm build` - run build in all packages
 - `pnpm lint` - run type checking
 - `pnpm test` - run unit tests
+
+## See also
+
+- [moadim](https://moadim.io/) - loop engineering: build, schedule & run agent loops.
